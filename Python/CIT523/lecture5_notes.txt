@@ -1,0 +1,36 @@
+Recursion is will call a function a number of times, until a while condition is met that returns it to the last function that called it, preferably causing a return to be met for each prior calling of the function. The interesting part is that it does not break the scope of the function. 
+
+Using an environment model, a recursive function can work, but how do we know this?
+	It's simple to consider this as a for-loop with a fancy hat. 
+	The idea of induction can help us reason this.
+		So, to prove a statement indexed on integers is true for all values of n:
+			We prove it is true when n is the smallest value
+			We then prove it is true for an arbitraty value of n, to show it is true for n+1.
+			an example:
+				0+1+2+3....+n = (n(n+1))/2
+				Which is to say, if n = 0, then LHS is 0, and RHS is 0*1/2 = 0, so it is true.
+				Now, if n=1, then LHS is 1, and RHS is (1(1+1))/2=1, so it is also true.
+				To place this into algebraic terms... ((k+1)(k+2))/2=k(k+1)/2+(k+1), proving our original statement.
+
+				This is an important technique to use if you have to reverse engineer code at any point.
+
+
+	Now, let's consider a factorial.
+		n! = n * (n-1) * ... * 1 
+		there is an edge case for this, at the value of 1, it is simply 1.
+		so, here's an example of the code....
+			def factR(n)
+			'''assumes that n is an int > 0
+			return n!'''
+			if n == 1:
+				return n
+			return n*factR(n-1)
+
+The towers of hanoi.
+
+	To generalize, there are a succession of smaller pieces stacking around a pillar. There are two empty pillars, and the goal is to move all pieces to another pillar without stacking a larger piece over a smaller one.
+
+	To accomplish this, two recursions are necessary. There is some code necessary for this. To work from the front stack towards the back stack, we take a small piece, take it to stack we want to move it to. We then place the subsequent piece from the main pillar and then move it to the other pillar. the first piece is them moved to the other pillar
+
+The divide and conquer algorithim
+	solve a hard problem by breaking it into a set of sub-problems that are easier than the original problem.

@@ -1,0 +1,24 @@
+Scope of the lecture:
+
+We will get to work with lists, dictionaries, and tuples, aka compound data objects.
+
+Tuples
+	The are ordered sequences of elements, not characters. The can be added together in sequence. Each element in a tuple can be of a different object type, (char, string, float, or bool.) The are indexed,sliceable, concatenateable, and loopable. Indexes be accesed by calling the tuple then a closed bracket.
+	They are also capable of doing singletons, which is a tuple with only one element.
+
+	
+Lists
+
+	When declared, these are enclosed in square brackets. They are mutable, their elements are changable. They are capable of aliasing, a version of inheritance, which is potentially treacherous.
+	Concatenation here is important, it adds two lists together as one, modifying each of the component lists effects the "flat" concatenated list.
+	Mutation is like concatenation, but creates a new copy of the list It creates a list that does not update with it's component lists. It can be called by the following:
+	list =['foo', 'bar']
+	listCopy = list [:]
+	This syntax with the colon signifies that we are creating a new list as a copy.
+
+Dictionaries
+	Dictionaries are much like lists in that they are mutable, but instead of being indexed, they are *keyed*. This means that they have a value associated with them. These values allow them to be referred to in an arbitrary fashion. They are also called via curly brackets in the following sytax:
+	{'Jan':1, 'Feb':2, 'Mar':3}
+	As for the first three months in a calendar. Of course, having keys of consecutive integers is just as good as an index, so a list may be better for this case. 
+	What's more imporant is that these items are *unordered*. That said, we can iterate over them via for loops, though the for loop will return the keys to the dictionary, not the entries themselves (though they can easily be called, given their keys.) Keys *cannot be mutable*, so lists are not good for keys.
+
