@@ -45,15 +45,6 @@ def chooseWord(wordlist):
 # Load the list of words into the variable wordlist
 # so that it can be accessed from anywhere in the program
 wordlist = loadWords()
-secretWord = chooseword(wordlist)
-global letters = {}
-letters['guessable'] = string.ascii_lowercase
-letters['trueGuesses'] = ''
-letters['untrueGuesses'] = ''
-
-#for char in secretWord:
-#	lettersGuessed[char] = False
-#^not sure why this is here
 
 def isWordGuessed(secretWord, lettersGuessed):
     '''
@@ -62,40 +53,20 @@ def isWordGuessed(secretWord, lettersGuessed):
     returns: boolean, True if all the letters of secretWord are in lettersGuessed;
       False otherwise
     '''
-	trueGuesses = 0
-	for char in letterGuessed:
-#Lets remove duplicate guesses.
-		while lettersGuessed.count(char) > 1:
-			lettersGuessed.remove(char)
-		if char in secretWord:
-			trueGuesses += secretWord.count(char)
-	if trueGuesses = len(secretWord):
-		return True
-	else:
-		return False
+    # FILL IN YOUR CODE HERE...
+
+
 
 def getGuessedWord(secretWord, lettersGuessed):
     '''
     secretWord: string, the word the user is guessing
-    lettersGuessed: dictionay, what letters have been guessed correctly, what letters haven't been guessed, and what is still to be guessed
-
+    lettersGuessed: list, what letters have been guessed so far
     returns: string, comprised of letters and underscores that represents
       what letters in secretWord have been guessed so far.
     '''
-	global letters
-	for char in lettersGuessed:
-		letters['guessable'] = letters['guessable'].remove(char)
-		if char in secretWord:
-			letters['trueGuesses'] += char
-		else:
-			letters['untrueGuesses'] += char
-#We may want this part of the function someplace else
+    # FILL IN YOUR CODE HERE...
 
-	for char in lettersGuessable:
-		if char in secretWord:
-			secretWord = secretWord.replace(char, '_')
-		
-	return secretWord
+
 
 def getAvailableLetters(lettersGuessed):
     '''
@@ -103,10 +74,8 @@ def getAvailableLetters(lettersGuessed):
     returns: string, comprised of letters that represents what letters have not
       yet been guessed.
     '''
-	global letters
-
-	return letters['guessable']
-
+    # FILL IN YOUR CODE HERE...
+    
 
 def hangman(secretWord):
     '''
@@ -128,33 +97,11 @@ def hangman(secretWord):
 
     Follows the other limitations detailed in the problem write-up.
     '''
-	print 'Welcome to hang, man.'
-	print 'Lets get started, I\'ve picked a word, and you have to guess it. \n You can guess incorrectly 7 times'
+    # FILL IN YOUR CODE HERE...
 
-	while len(letters['untrueGuesses'])<7:
 
-		if  isWordGuessed (secretWord, letters['trueGuesses']):
-			print 'You did it!'
-			again = raw_input ('Would you like to play again? ')
-			if again[0]=='y':
-				secretWord = chooseWord(wordlist).lower()
-				return hangman(secretWord)
-			else:
-				return
-		else:
-			if len(letters['untrueGuesses']==6:
-				print 'You have one guess left'
-			else:
-				print 'You have %d guesses left' % (7-len(letters['untrueGuesses'])
-			for char in letters['guessable']
-			print 'Available letters are %s' % letters['guessable']
-			guess = raw_input('Guess a letter, buddy: ')
-			
-	
 
-		
 
-	
 
 
 # When you've completed your hangman function, uncomment these two lines
