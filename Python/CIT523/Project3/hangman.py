@@ -1,7 +1,8 @@
 # 6.00 Problem Set 3
 # 
 # Hangman game
-#
+# Ben Weeks
+# Anne Warnock
 
 # -----------------------------------
 # Helper code
@@ -34,7 +35,6 @@ def loadWords():
 def chooseWord(wordlist):
     """
     wordlist (list): list of words (strings)
-
     Returns a word from wordlist at random
     """
     return random.choice(wordlist)
@@ -92,10 +92,11 @@ def getGuessedWord(secretWord, lettersGuessed):
     for char in letters['guessable']:          
         if char in secretWord:
             secretWord = secretWord.replace(char, '_')
+    finalWord=''
     for char in secretWord:
-        secretWord += '%s ' %char
+        finalWord += '%s ' %char
             
-    return secretWord
+    return finalWord
 
 def getAvailableLetters(lettersGuessed):
     '''
@@ -162,9 +163,9 @@ def hangman(secretWord):
 # When you've completed your hangman function, uncomment these two lines
 # and run this file to test! (hint: you might want to pick your own
 # secretWord while you're testing)
-#wordlist = loadWords()
-#secretWord = chooseWord(wordlist).lower()
+wordlist = loadWords()
+secretWord = chooseWord(wordlist).lower()
 letters={}
 guess = ''
-#hangman(secretWord)
-hangman('candlemass')
+hangman(secretWord)
+#hangman('candlemass')
