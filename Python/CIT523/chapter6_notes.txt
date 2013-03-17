@@ -1,0 +1,82 @@
+Testing
+===
+
+There are a multitude of different kinds of tests that can be run on a program. A collection of inputs that has a high likelihood of revealing bugs is called a **test suite** This is generally done through **partitioning** possible inputs to devise adequate heuristics. These heuristics are devised through the code, a process called **glass-box testing**; or are devised through the program's specifications, a process called **black-box testing**.
+
+Black-box testing
+---
+
+Black box testing generally doesn't rely any knowledge of how the code is writted to test it. This has the benefit of preventing any confirmation bias in testing metrics.
+
+Glass-box testing
+---
+
+Glass-box testing accounts for the structure of the code, and allows any fringe cases to be tested for. It allows for a program to be **path complete** when every potential path through the program is tested, this can be difficult to do with functional implementations due to their inherent recursion.
+
+Conducting Tests
+---
+
+Testing should start with **unit testing**, where individual functions are tested; then through **integration testing** where the program as a whole is tested.
+
+A common use of professional testing is done through the use of **Test drivers** which do many things for a person testing code, such as:
+
+ * Implement the necessary environment for the program to exicute.
+ * Execute the program to be tested.
+ * Save the output of the test
+ * Compare the results of the test to its intended outcome
+ * Reports the success or failure of such a test.
+
+In addition to test drivers, **stubs** are needed to test parts of the program being used by the unit being tested. The need to have several components to be functional:
+
+ * Sanitize the environment and function calls.
+ * Assigning arguments and globals within the specification.
+ * Return values within the specification.
+
+This can be quite challenging, it may be necessary to build a table of arguments and create a table with values to return each combination of arguments for a test suite.
+
+Automatic testing facilitates **regression testing** allowing portion of code to be tested after they're believed to work.
+
+Debugging
+===
+
+The etymology of the word bug as used in programming may derive from the word bugbear, which was shortened to bug by Shakespeare's Hamlet. Its use still denotes that your code does not work as you would like.
+
+Bugs can be categorized between two spectrums:
+ * **Overt/Covert** - How noticible is the error? Does the program crash or provide an erroneous output?
+ * **Persistent/intermittent** - Does the code display the givan error every time?
+
+The practice of **defensive programming** is such that mistakes in code will display both an overt and persistent result.
+
+How to Debug
+---
+
+Debugging is to employ scepticism on all cases of your implementation. It requires a willingness to accept you do not know everything about your code. The scientific method of hypothesizing, testing, comparing, modifying your code, and then rewriting a hypothesis is an important one.
+
+Designing an Experiment
+---
+
+Debugging is a search process and there are some good practices to consider.:
+
+ * Look for usual suspects:
+ ** Passing arguments in the wrong order.
+ ** Mispelling a function or variable
+ ** Initializing the wrong variable
+ ** Testing for equality rather than near equality
+ ** Testing the equality of a value rather that the equality of an object
+ ** Not accounting for side-effects of a built-in function.
+ ** Forgetting () when calling a function.
+ ** Unintentially creating aliases.
+ ** Any number of your typical mistakes (we all have them)
+ * An important thing to consider... Don't ask yourself why the program **isn't doing what you want it to** and ask yourself why the program **is doing what it is** This is the root of scepticism, and is very useful.
+ * Another important thing... **the bug is rarely where you think it is**. Like finding lost keys, if you knew where the problem was, it wouldn't be a problem...
+ * Explain the problem to somebody else. This generally helps you reconteztualize the problem, hopefully in a way that is easier for both you and the person you're speaking with in order to find a solution.
+ * The documentation isn't law. Code may not always do what comments  suggest.
+ * Stop debugging and start writing documentation will help you contextualize the code, and it's problems, in a more holistic fashion.
+ * Walk away and try again another day. Burning out on a problem can happen. Let your mind relax around the problem, and it is more apt to find the proper solution.
+
+Once you have the bug
+---
+
+**Stop** do not start coding and testing a fix. Determine if the bug explains all the symptoms, if so, then proceed; otherwise, keep debugging.
+
+Before you apply a major change, perhaps save it as a new file. A version control system (VCS) such as Git, Mercurial, or Subversion is helpful for this.
