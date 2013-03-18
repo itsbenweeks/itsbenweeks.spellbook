@@ -21,7 +21,8 @@ def ask_number(low, high, question):
     """Ask for a number within a range."""
     response = None
     for response in range(low, high):
-        response = int(input(questio))
+        response = int(input(question))
+		#Typo for variable question, changed from questio=>question
 
 print("Welcome to the world's simplest game!\n")
 #The again variable was being called before being instantiated.
