@@ -20,9 +20,10 @@ def ask_yes_no(question):
 def ask_number(low, high, question):
     """Ask for a number within a range."""
     response = None
-    for response in range(low, high):
-        response = int(input(question))
-		#Typo for variable question, changed from questio=>question
+    for response not in range(low, high):
+		response = int(raw_input(question))
+	return response
+		#Typo for variable question, changed from questio=>question, corrected for loop, added a return statement
 
 print("Welcome to the world's simplest game!\n")
 #The again variable was being called before being instantiated.
