@@ -62,23 +62,31 @@ def getFrequencyDict(sequence):
 # Problem #1: Scoring a word
 #
 def getWordScore(word, n):
-    """
-    Returns the score for a word. Assumes the word is a valid word.
+	"""
+	Returns the score for a word. Assumes the word is a valid word.
 
-    The score for a word is the sum of the points for letters in the
-    word, multiplied by the length of the word, PLUS 50 points if all n
-    letters are used on the first turn.
+	The score for a word is the sum of the points for letters in the
+	word, multiplied by the length of the word, PLUS 50 points if all n
+	letters are used on the first turn.
 
-    Letters are scored as in Scrabble; A is worth 1, B is worth 3, C is
-    worth 3, D is worth 2, E is worth 1, and so on (see SCRABBLE_LETTER_VALUES)
+	Letters are scored as in Scrabble; A is worth 1, B is worth 3, C is
+	worth 3, D is worth 2, E is worth 1, and so on (see SCRABBLE_LETTER_VALUES)
 
-    word: string (lowercase letters)
-    n: integer (HAND_SIZE; i.e., hand size required for additional points)
-    returns: int >= 0
-    """
-    # TO DO ... <-- Remove this comment when you code this function
+	word: string (lowercase letters)
+	n: integer (HAND_SIZE; i.e., hand size required for additional points)
+	returns: int >= 0
+	"""
+	score = 0
 
+	for char in word:
+		score += SCRABBLE_LETTER_VALUES[char]
 
+	score *=len(word)
+
+	if len(word) == n:
+		score +=50
+
+	return score
 
 #
 # Problem #2: Make sure you understand how this function works and what it does!
@@ -132,25 +140,29 @@ def dealHand(n):
 # Problem #2: Update a hand by removing letters
 #
 def updateHand(hand, word):
-    """
-    Assumes that 'hand' has all the letters in word.
-    In other words, this assumes that however many times
-    a letter appears in 'word', 'hand' has at least as
-    many of that letter in it. 
+	"""
+	Assumes that 'hand' has all the letters in word.
+	In other words, this assumes that however many times
+	a letter appears in 'word', 'hand' has at least as
+	many of that letter in it. 
 
-    Updates the hand: uses up the letters in the given word
-    and returns the new hand, without those letters in it.
+	Updates the hand: uses up the letters in the given word
+	and returns the new hand, without those letters in it.
 
-    Has no side effects: does not modify hand.
+	Has no side effects: does not modify hand.
 
-    word: string
-    hand: dictionary (string -> int)    
-    returns: dictionary (string -> int)
-    """
-    # TO DO ... <-- Remove this comment when you code this function
-
-
-
+	word: string
+	hand: dictionary (string -> int)    
+	returns: dictionary (string -> int)
+	"""
+	result={}
+	for item in hand:
+		result[item]=hand[item]
+	for char in word:
+		if result[char]-=1 == 0:
+			result.pop(char)
+		result[char]-=1
+	return result
 #
 # Problem #3: Test word validity
 #
