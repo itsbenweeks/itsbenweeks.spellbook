@@ -24,7 +24,8 @@ def ask_number(low, high, question):
         response = int(input(questio))
 
 print("Welcome to the world's simplest game!\n")
-
+#The again variable was being called before being instantiated.
+again = ''
 while again != "n":
     players = []
     num = ask_number(question = "How many players? (2 - 5): ",
