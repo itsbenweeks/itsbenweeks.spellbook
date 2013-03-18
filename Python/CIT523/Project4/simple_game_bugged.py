@@ -1,4 +1,5 @@
-# Simple buggy Game
+# Project 4 - Simple buggy Game
+# Debugged by Ben Weeks
 # I started by replacing all inputs with raw_input
 import random
 class Player(object):
@@ -22,7 +23,7 @@ def ask_yes_no(question):
 def ask_number(low, high, question):
 	"""Ask for a number within a range."""
 	response = None
-	while response not in range(low, high+1):
+	while response not in range(low, high+1): #The range function will stop before the number 'high' so I added one to it.
 		response = int(raw_input(question))
 	return response
 #Typo for variable question, changed from questio=>question, corrected for loop, added a return statement
