@@ -3,6 +3,7 @@
 # The 6.00 Word Game
 # Created by: Kevin Luu <luuk> and Jenna Wiens <jwiens>
 # Modified by: Sarina Canelake <sarina>
+# Midfied further by: Ben Weeks <beex>
 #
 
 import random
@@ -159,27 +160,28 @@ def updateHand(hand, word):
 	for item in hand:
 		result[item]=hand[item]
 	for char in word:
-		if result[char]-=1 == 0:
-			result.pop(char)
 		result[char]-=1
+		if result[char] == 0:
+			result.pop(char)
 	return result
 #
 # Problem #3: Test word validity
 #
 def isValidWord(word, hand, wordList):
-    """
-    Returns True if word is in the wordList and is entirely
-    composed of letters in the hand. Otherwise, returns False.
-
-    Does not mutate hand or wordList.
-   
-    word: string
-    hand: dictionary (string -> int)
-    wordList: list of lowercase strings
-    """
-    # TO DO ... <-- Remove this comment when you code this function
-
-
+	"""
+	Returns True if word is in the wordList and is entirely
+	composed of letters in the hand. Otherwise, returns False.
+	
+	Does not mutate hand or wordList.
+	
+	word: string
+	hand: dictionary (string -> int)
+	wordList: list of lowercase strings
+	"""
+	for char in word:
+		if word.count(char) > hand.get(char,0):
+			return False
+	return word in wordList
 #
 # Problem #4: Playing a hand
 #
