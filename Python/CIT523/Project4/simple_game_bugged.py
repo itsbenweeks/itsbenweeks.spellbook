@@ -1,4 +1,5 @@
 # Simple buggy Game
+# I started by replacing all inputs with raw_input
 import random
 class Player(object):
     """ A player for a game. """
@@ -14,27 +15,28 @@ def ask_yes_no(question):
     """Ask a yes or no question."""
     response = None
     while response not in ("y", "n"):
-        response = input(question).lower()
-    return response
+        response = raw_input(question).lower()
+	
+	return response
 
 def ask_number(low, high, question):
-    """Ask for a number within a range."""
-    response = None
-    for response not in range(low, high):
+	"""Ask for a number within a range."""
+	response = None
+	while response not in range(low, high+1):
 		response = int(raw_input(question))
 	return response
-		#Typo for variable question, changed from questio=>question, corrected for loop, added a return statement
+#Typo for variable question, changed from questio=>question, corrected for loop, added a return statement
 
 print("Welcome to the world's simplest game!\n")
 #The again variable was being called before being instantiated.
 again = ''
 while again != "n":
     players = []
-    num = ask_number(question = "How many players? (2 - 5): ",
-                           low = 2, high = 5)
+    num = ask_number(2, 5,"How many players? (2 - 5): ")
     for i in range(num):
-        name = input("Player name: ")
-        score = random.range(100) + 1    
+        name = raw_input("Player name: ")
+        score = random.randint(1,100)
+		#modified random.range to randint functioninstead.
         player = Player(name, score)
         players.append(player)
 
