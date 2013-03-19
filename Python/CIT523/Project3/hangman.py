@@ -86,6 +86,7 @@ def getGuessedWord(secretWord, lettersGuessed):
             letters['guessable'] = letters['guessable'].replace(char, '')
         else:
             letters['untrueGuesses'] += char
+            letters['guessable'] = letters['guessable'].replace(char, '')
             print 'Naw, dude. Guess again.'
 #We may want this part of the function someplace else
 
@@ -153,6 +154,7 @@ def hangman(secretWord):
             print 'Available letters are %s' % letters['guessable']
             guess = raw_input('Guess a letter, buddy: ')
             print getGuessedWord(secretWord, guess)
+    print 'You lose! The word was %s.' %secretWord
     again = raw_input ('Would you like to play again? ')
     if again[0]=='y':
         secretWord = chooseWord(wordlist).lower()
