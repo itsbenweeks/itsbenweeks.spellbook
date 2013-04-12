@@ -1,0 +1,44 @@
+Chapter 12
+
+A return to the chromosome theory of inheritence. What is a chromosome? Condensed DNA. When are the visible? During metaphase. They are like 'wound spaghetti' of chromatin around a centromere. 
+The anatomy of the chromosome: 
+	Centromere: In the middle of the chromosome binidnig the branches of the chromosome outtward.
+	Telomere: These are the sticky ends that attach to spindles and allow the chromosomes to be identified. They also shorten over time.
+	Origin of replicattion (ORI): A gene has to come from somewhere ®
+	Autonomously Replicating Sequences (ARS): Permit replication of plasmids in yeast cells, generally 16 pairs.
+	Scaffold-associated regions (SARs): Sites
+	chromatin is actually made of **two types**
+		Heterochromatin(condensed) - A transcriptionally inactive type which has two classes.
+			Constitutive - Affects genes, PEV, Barr Bosies (Xist gene, RNA gene)
+			Facilitative == CH_3; COCH_3
+		Euchruchromatin(decondensed) - A transctionally active type
+	Chromatin is ⅓DNA, ⅓histones, & ⅓proteins.
+	Histones: small, + charged, & highly conserved.
+		½ of chromatin by weight.
+	Histones have five types: H1, H2A, H2B, H3, & H4
+		H1 - Secures 'naked DNA' to form nucleosomes w/ nucleosome core and 60bp of linker DNA.
+		H2A - Part of nucleosome core.
+		H2B - Part of nucleosome core.
+		H3 - Part of nucleosome core.
+		H4 - Part of nucleosome core.
+	Non-Histones:
+		structure (scaffolding)
+		replication (polymerase)
+		segregation (kinetochores)
+		transcription (RNA poly)
+	DNA wraps twice around nucleosomes, and is therefore condensed, and then characterized as heterochromatin. (and is 100 Angstroms)
+	These nucleosomess are then coiled further into supercoils and are now 300 Angstroms with six nucleosomes per turn.
+	* To investigate further: Figure 12.13b is a good example of position-effect variegation (PEV) as proof of faculative heterochromatin.
+	Heterochromatin formation between female mammals can vary and be mosaic at X-linked genes
+		* In females heterozygous for x-linked mutation. (Caleco Cats)
+	
+	DNase hyper sensitive sites - promote transcribed genes as more susceeptible to nuclease digestion than promoters of non-transcribed genes.
+
+	Function of centromeres:
+		1. Hold sister chromatids together. (cohesin)
+		2. Attachment sites for chromosome segregation.
+	What is cohesin? Is a binding protein in mitosis.
+		Shugoshin prevents degredation of cohesin in meiosis.
+	Centromere characteristics.
+		Tandem repeats for 5-300 strands.
+

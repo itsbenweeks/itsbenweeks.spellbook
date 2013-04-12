@@ -1,0 +1,14 @@
+Measuring complexity
+===
+
+We want our code to return a correct response, but we also want it to do so with minimal **computational complexity**.
+
+We can  think of complexity in a few different ways:
+
+ * **Logatrithmic** complexity is the most efficient, and usually utilizes a factorial of some sort to eliminate possabilities. It is quite helpful.
+ * **Linear** complexity will grow at a steady rate, and is generally quite an easy way to think.
+ * **Exponential** complexity will grow in complexity quite quickly. It is generally avoided for this case.
+
+It's important to note that combinations of these can also occur (although logarithmic * exponential is just liear complexity). Solutions that are linear logarithmic will become more complex at a slower rate than a solution of linear complexity, and exponential linear is also to be avoided.
+
+

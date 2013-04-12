@@ -68,12 +68,12 @@ def computeRoot(poly, x_0, epsilon):
 # Test Cases
 def test(function):
     if function == 'newton':
-        print computeRoot([-13.39, 0.0, 17.5, 3.0, 1.0], 0.1, .0001)==[0.806790753796352, 7]
-        print computeRoot([1, 9, 8], -3, .01)==[-1.0000079170005467, 5]
-        print computeRoot([1, -1, 1, -1], 2, .001)==[1.0002210630197605, 4]
-        print computeRoot([1, 2, 3, 4.3, -5], 0.3, 0.0001)==[-0.47771869826311336, 6]
-        print computeRoot([-8, 2, 1], 20, 0.0001)==[2.0000000605441395, 6]
-        print computeRoot([-8, 2, 1], 2, 0.0001)==[2, 0]
-        print computeRoot([-8, 2, 1], -20, 0.0001)==[-4.00000000844848, 6]
-        print computeRoot([-8, 2, 1], -4, 0.0001) ==[-4, 0]
-        print computeRoot([4, 56, 0, 28, 0, 14, 0, 1], 1, 0.0001)==[-0.07124736072967754, 4]
+        print computeRoot([-13.39, 0.0, 17.5, 3.0, 1.0], 0.1, .0001)
+        print computeRoot([1, 9, 8], -3, .01)
+        print computeRoot([1, -1, 1, -1], 2, .001)
+        print computeRoot([1, 2, 3, 4.3, -5], 0.3, 0.0001)
+        print computeRoot([-8, 2, 1], 20, 0.0001)
+        print computeRoot([-8, 2, 1], 2, 0.0001)
+        print computeRoot([-8, 2, 1], -20, 0.0001)
+        print computeRoot([-8, 2, 1], -4, 0.0001) 
+        print computeRoot([4, 56, 0, 28, 0, 14, 0, 1], 1, 0.0001)

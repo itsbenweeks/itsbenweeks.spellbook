@@ -3,7 +3,7 @@
 # The 6.00 Word Game
 # Created by: Kevin Luu <luuk> and Jenna Wiens <jwiens>
 # Modified by: Sarina Canelake <sarina>
-# Midfied further by: Ben Weeks <beex>
+# Modfied further by: Ben Weeks <beex>
 #
 
 import random
@@ -21,7 +21,7 @@ SCRABBLE_LETTER_VALUES = {
 # Helper code
 # (you don't need to understand this helper code)
 
-WORDLIST_FILENAME = "words.txt"
+WORDLIST_FILENAME = "words.2.txt"
 
 def loadWords():
     """
@@ -220,7 +220,6 @@ def playHand(hand, wordList, n):
 	n: integer (HAND_SIZE; i.e., hand size required for additional points)
 	  
 	"""
-	# BEGIN PSEUDOCODE <-- Remove this comment when you code this function; do your coding within the pseudocode (leaving those comments in-place!)
 	# Keep track of the total score
 	score = 0    
 	# As long as there are still letters left in the hand:
@@ -244,7 +243,7 @@ def playHand(hand, wordList, n):
             # Otherwise (the word is valid):
 			else:
                 # Tell the user how many points the word earned, and the updated total score, in one line followed by a blank line
-				score +=getWordScore(word, HAND_SIZE)
+				score +=getWordScore(word, n)
 				print '"%s" earned %s points. Total: %s'% (word, getWordScore(word,n), score)
                 # Update the hand 
 				hand=updateHand(hand, word)
@@ -274,6 +273,7 @@ def playGame(wordList):
 		choice = raw_input('Enter n to deal a new hand, r to replay the last hand, or e to end game: ').lower()
 		if choice.startswith('n'):
 			hand=dealHand(HAND_SIZE)
+#			print "hand passed to playHand: %s" %displayHand(hand)
 			playHand(hand, wordList, HAND_SIZE)
 		elif choice.startswith('r'):
 			if calculateHandlen(hand)==0:

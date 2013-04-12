@@ -1,0 +1,17 @@
+Things you will need for the midterm:
+	Recursion
+	For Loops
+	Complexity
+	mutable objects
+	tuples
+	debugging concepts
+		testing types
+	debugging specific code
+
+	Some exercises to review:
+		L8P3
+	Textbook sections to review:
+		Specification & Abstraction (pgs. 41-42)
+		Cloning (pg. 62)
+		Recursion and Induction (pgs. 43-44)
+

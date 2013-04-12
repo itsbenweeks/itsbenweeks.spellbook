@@ -1,0 +1,29 @@
+The nineth lecture will cover searching algorithms.
+We will look through binary search, and sorting algorithms, and learn the power of utilizing them both in tandem.
+
+Algorithms and data structure
+---
+
+Comp. Scientists utilize a plethora of useful searching algorithms.
+A search algorithm finds an item within a group of items, referred to as the **search space**. This is done thorugh a number of methods.
+
+ 1. Linear search
+  
+	* Generally iterative through, at most, the length of the list.
+	* Needs indirection if they are of an indeterminate size.
+	* Indirection will have pointers telling where in memory space it is.
+	* Maintains linear complexity of the length of the list.
+				 
+ 1. Binary search
+				   
+	* Assume a ordered list
+	* A search becomes possible, based upon that sorting metric.	
+	* Maintains log linear complexity of the length of the list.
+
+ 1. Selection Sort
+	
+	* Searches the search space, and finds the smallest element.
+	* Search space is then decremented by one and another search for the smallest is run.
+	
+Some best practices:
+	It's generally better to sort since it is useful for all searches after the sort, not just the first one.

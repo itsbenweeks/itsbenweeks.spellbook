@@ -1,0 +1,712 @@
+<html>
+<head>
+<title>Ben Weeks Resume</title>
+<style type="text/css">
+ol {
+	margin:0;
+	padding:0
+}
+p {
+	margin:0
+}
+.c22 {
+	vertical-align:top;
+	width:395.9pt;
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1pt;
+	padding:3pt 3pt 3pt 3pt
+}
+.c0 {
+	vertical-align:top;
+	width:402.8pt;
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1pt;
+	padding:3pt 3pt 3pt 3pt
+}
+.c24 {
+	vertical-align:middle;
+	width:140.9pt;
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1pt;
+	padding:3pt 3pt 3pt 3pt
+}
+.c15 {
+	vertical-align:top;
+	width:401pt;
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1pt;
+	padding:3pt 3pt 3pt 3pt
+}
+.c6 {
+	vertical-align:top;
+	width:87.1pt;
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1pt;
+	padding:3pt 3pt 3pt 3pt
+}
+.c8 {
+	vertical-align:middle;
+	width:341.4pt;
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1pt;
+	padding:3pt 3pt 3pt 3pt
+}
+.c17 {
+	vertical-align:top;
+	width:86.6pt;
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1pt;
+	padding:3pt 3pt 3pt 3pt
+}
+.c16 {
+	vertical-align:top;
+	width:84.2pt;
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1pt;
+	padding:3pt 3pt 3pt 3pt
+}
+.c20 {
+	vertical-align:top;
+	width:86.9pt;
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1pt;
+	padding:3pt 3pt 3pt 3pt
+}
+.c19 {
+	vertical-align:top;
+	width:397.9pt;
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1pt;
+	padding:3pt 3pt 3pt 3pt
+}
+.c18 {
+	vertical-align:top;
+	width:395.8pt;
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1pt;
+	padding:3pt 3pt 3pt 3pt
+}
+.c9 {
+	width:484.5pt;
+	background-color:#ffffff;
+	padding:56.7pt 42.5pt 56.7pt 85pt
+}
+.c5 {
+	margin-left:14.4pt;
+	padding-bottom:7.2pt
+}
+.c3 {
+	font-style:italic
+}
+.c21 {
+	padding-bottom:7.2pt
+}
+.c14 {
+	text-align:center
+}
+.c12 {
+	padding-bottom:10.8pt
+}
+.c4 {
+	border-collapse:collapse
+}
+.c13 {
+	margin-left:13.5pt
+}
+.c7 {
+	font-weight:bold
+}
+.c23 {
+	font-size:13pt
+}
+.c2 {
+	font-size:10pt
+}
+.c1 {
+	direction:ltr
+}
+.c10 {
+	margin-left:14.4pt
+}
+.c11 {
+	height:0pt
+}
+body {
+	color:#000000;
+	font-size:12pt;
+	font-family:Verdana
+}
+h1 {
+	padding-top:4.5pt;
+	line-height:1.0;
+	text-align:left;
+	color:#000000;
+	font-size:18pt;
+	font-family:Verdana;
+	font-weight:bold;
+	padding-bottom:4.5pt
+}
+h2 {
+	padding-top:4.5pt;
+	line-height:1.0;
+	text-align:left;
+	color:#000000;
+	font-style:italic;
+	font-size:14pt;
+	font-family:Verdana;
+	font-weight:bold;
+	padding-bottom:4.5pt
+}
+h3 {
+	padding-top:4.5pt;
+	line-height:1.0;
+	text-align:left;
+	color:#000000;
+	font-size:12pt;
+	font-family:Verdana;
+	font-weight:bold;
+	padding-bottom:4.5pt
+}
+h4 {
+	padding-top:4.5pt;
+	line-height:1.0;
+	text-align:left;
+	color:#000000;
+	font-size:10pt;
+	font-family:Verdana;
+	font-weight:bold;
+	padding-bottom:4.5pt
+}
+h5 {
+	padding-top:4.5pt;
+	line-height:1.0;
+	text-align:left;
+	color:#000000;
+	font-style:italic;
+	font-size:8pt;
+	font-family:Verdana;
+	font-weight:bold;
+	padding-bottom:4.5pt
+}
+h6 {
+	padding-top:4.5pt;
+	line-height:1.0;
+	text-align:left;
+	color:#000000;
+	font-size:8pt;
+	font-family:Verdana;
+	font-weight:bold;
+	padding-bottom: 4.5pt
+}</style>
+</head>
+<body class="c9">
+<p>
+	<span></span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c8">
+		<a href="#" name="id.89c16c4386dc"></a>
+		<p class="c14 c1">
+			<span class="c23">Ben Weeks</span><span class="c2"><br>
+			188 Boylston Street<br>
+			Jamaica Plain, MA 02130</span><span>&nbsp;</span>
+		</p>
+	</td>
+	<td class="c24">
+		<a href="#" name="id.1da3067b44da"></a>
+		<p class="c1">
+			<span class="c2">Cell (617) 858-4256<br>
+			E-Mail bweeks@gmail.com </span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<a href="#" name="id.84584a07f40f"></a>
+<p class="c1">
+	<span class="c7">Work Experience</span><span>&nbsp;</span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c22">
+		<p class="c1">
+			<span class="c3 c7 c2">Lorem Ipsum </span>
+		</p>
+	</td>
+	<td class="c6">
+		<p class="c1">
+			<span class="c3 c2">Cambridge, MA</span><span>&nbsp;</span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<p class="c13 c1">
+	<span class="c7 c2">Tech Support/Bookeseller </span><span class="c2">- </span><span class="c3 c2">December 2009&ndash;January 2011</span>
+</p>
+<p class="c13 c1">
+	<span class="c2">-Entered thousands of books into database for online sale.</span>
+</p>
+<p class="c13 c1">
+	<span class="c2">-Assisted customers in fulfilling book requests.</span>
+</p>
+<p class="c1 c13">
+	<span class="c7 c2">-</span><span class="c2">Created technology strategy to service customers in the Cambridge area.</span>
+</p>
+<p class="c13 c1 c21">
+	<span class="c2">-Organized storefront to optimize customer experience.</span><span class="c2">&nbsp;</span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c18">
+		<p class="c1">
+			<span class="c3 c7 c2">Harmonix Music Systems</span><span>&nbsp;</span>
+		</p>
+	</td>
+	<td class="c6">
+		<p class="c1">
+			<span class="c3 c2">Cambridge, MA</span><span>&nbsp;</span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<p class="c5 c1">
+	<span class="c7 c2">IT Coordinator - </span><span class="c3 c2">August 2008&ndash;November 2009</span><span class="c2">&nbsp;<br>
+	-Maintained network integrity through gateway management.<br>
+	-Fulfilled employee hardware requests in accordance with departmental budgetary concerns.<br>
+	-Developed web-based inventory management system. </span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c18">
+		<a href="#" name="id.f38979f10781"></a>
+		<p class="c1">
+			<span class="c3 c7 c2">The Berkman Center for Internet &amp; Society</span><span>&nbsp;</span>
+		</p>
+	</td>
+	<td class="c6">
+		<p class="c1">
+			<span class="c3 c2">Cambridge, MA</span><span>&nbsp;</span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<p class="c5 c1">
+	<span class="c7 c2">Junior Web Developer &ndash; StopBadware.org </span><span class="c2">- </span><a href="#" name="id.9292fa220d1f"></a><span class="c3 c2">August 2006&ndash;August 2008 </span><span class="c2"><br>
+	-Ensured consistent web updates in adherance to release schedules.<br>
+	-Maintained web front end for a community driven web security service effort.<br>
+	-Constructed and modified software and website guidelines for consumer needs.</span><span>&nbsp;</span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c15">
+		<a href="#" name="id.fb2a4aac1b30"></a>
+		<p class="c1">
+			<span class="c3 c7 c2">Computer Geeks </span>
+		</p>
+	</td>
+	<td class="c16">
+		<p class="c1">
+			<span class="c3 c2">Boston, MA</span><span>&nbsp;</span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<p class="c1 c5">
+	<span class="c7 c2">Computer Technician</span><span class="c2">&nbsp;- </span><a href="#" name="id.027815b23e5d"></a><span class="c3 c2">September 2005&ndash;March 2006 </span><span class="c2"><br>
+	-Provided on-site computer support for homes and small businesses.<br>
+	-Configured and maintained local networks for multiple businesses.</span><span>&nbsp;</span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c19">
+		<p class="c1">
+			<span class="c3 c7 c2">Curious George Goes to Wordsworth </span>
+		</p>
+	</td>
+	<td class="c17">
+		<p class="c1">
+			<span class="c3 c2">Cambridge, MA</span><span>&nbsp;</span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<p class="c1 c10">
+	<span class="c7 c2">Bookseller - </span><a href="#" name="id.f135710de46d"></a><span class="c3 c2">March 2005&ndash;October 2005 </span><span class="c2"><br>
+	-Managed inventory to provide customers with the best children&#39;s books and toys. </span>
+</p>
+<p class="c1 c10">
+	<span class="c2">-Organized and maintained inventory to allow easy retrieval of books.</span>
+</p>
+<p class="c5 c1">
+	<span class="c2">-Utilized knowledge of children&#39;s literature to assist customers with the purchase of books. </span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c19">
+		<a href="#" name="id.c685a8c352eb"></a>
+		<p class="c1">
+			<span class="c3 c2 c7">Pine Computers </span>
+		</p>
+	</td>
+	<td class="c17">
+		<p class="c1">
+			<span class="c3 c2">Burlington, VT</span><span>&nbsp;</span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<p class="c1 c10">
+	<span class="c7 c2">Computer Technician/Business Consultant </span><span class="c2">- </span><a href="#" name="id.7c582e7a23ef"></a><span class="c3 c2">March 2004&ndash;March 2005</span><span class="c2"><br>
+	-Implemented basic web technologies to create web presences for several small businesses.</span>
+</p>
+<p class="c5 c1">
+	<span class="c2">-Ensured consistent client support by creating informative repair rubrics.<br>
+	-Responded on the front-line for customer concerns and requests via telephone.</span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c19">
+		<p class="c1">
+			<span class="c3 c7 c2">Barnes and Noble Booksellers</span>
+		</p>
+	</td>
+	<td class="c17">
+		<p class="c1">
+			<span class="c3 c2">Burlington, VT</span><span>&nbsp;</span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<p class="c1 c10">
+	<span class="c7 c2">Bookseller - </span><span class="c2 c3">Seprember 2001&ndash;February 2004</span><span class="c7 c2">&nbsp;</span><span class="c2"><br>
+	-Assisted customers in picking appropriate titles amidst thousands of books.</span>
+</p>
+<p class="c1 c10">
+	<span class="c2">-Shelved and realphabatized sections according to their needs.</span>
+</p>
+<p class="c1 c10 c12">
+	<span class="c2">-Facilitated customer purchases through point-of-sale hardware/software. </span>
+</p>
+<p class="c1">
+	<span class="c7">Education</span><span>&nbsp;</span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c0">
+		<p class="c14 c1">
+			<a href="#" name="id.496a419f25d0"></a><span class="c3 c7 c2">Bunker Hill Community College </span>
+		</p>
+	</td>
+	<td class="c20">
+		<p class="c1">
+			<span class="c3 c2">Boston, MA</span><span>&nbsp;</span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<p class="c1 c10">
+	<span class="c7 c2">A.S. in Biomedical Engineering </span><span class="c2">- </span><span class="c3 c2">September 2010&ndash; May 2013</span>
+</p>
+<p class="c12 c1 c10">
+	<span class="c2">-Dean&#39;s List, Fall 2010.</span>
+</p>
+<a href="#" name="id.c3dfa1330dc7"></a>
+<p class="c1">
+	<span class="c7">Other Skills</span><span>&nbsp;</span>
+</p>
+<p class="c1 c10">
+	<span class="c2">-Experience with HTML, CSS, Ruby, PHP, JavaScript and Ubuntu Linux internals.</span><span>&nbsp;</span>
+</p>
+<p class="c1 c10"><html>
+<head>
+<title>Ben Weeks Resume</title>
+<style type="text/css">
+ol{margin:0;padding:0}p{margin:0}.c22{vertical-align:top;width:395.9pt;border-style:solid;border-color:#ffffff;border-width:1pt;padding:3pt 3pt 3pt 3pt}.c0{vertical-align:top;width:402.8pt;border-style:solid;border-color:#ffffff;border-width:1pt;padding:3pt 3pt 3pt 3pt}.c24{vertical-align:middle;width:140.9pt;border-style:solid;border-color:#ffffff;border-width:1pt;padding:3pt 3pt 3pt 3pt}.c15{vertical-align:top;width:401pt;border-style:solid;border-color:#ffffff;border-width:1pt;padding:3pt 3pt 3pt 3pt}.c6{vertical-align:top;width:87.1pt;border-style:solid;border-color:#ffffff;border-width:1pt;padding:3pt 3pt 3pt 3pt}.c8{vertical-align:middle;width:341.4pt;border-style:solid;border-color:#ffffff;border-width:1pt;padding:3pt 3pt 3pt 3pt}.c17{vertical-align:top;width:86.6pt;border-style:solid;border-color:#ffffff;border-width:1pt;padding:3pt 3pt 3pt 3pt}.c16{vertical-align:top;width:84.2pt;border-style:solid;border-color:#ffffff;border-width:1pt;padding:3pt 3pt 3pt 3pt}.c20{vertical-align:top;width:86.9pt;border-style:solid;border-color:#ffffff;border-width:1pt;padding:3pt 3pt 3pt 3pt}.c19{vertical-align:top;width:397.9pt;border-style:solid;border-color:#ffffff;border-width:1pt;padding:3pt 3pt 3pt 3pt}.c18{vertical-align:top;width:395.8pt;border-style:solid;border-color:#ffffff;border-width:1pt;padding:3pt 3pt 3pt 3pt}.c9{width:484.5pt;background-color:#ffffff;padding:56.7pt 42.5pt 56.7pt 85pt}.c5{margin-left:14.4pt;padding-bottom:7.2pt}.c3{font-style:italic}.c21{padding-bottom:7.2pt}.c14{text-align:center}.c12{padding-bottom:10.8pt}.c4{border-collapse:collapse}.c13{margin-left:13.5pt}.c7{font-weight:bold}.c23{font-size:13pt}.c2{font-size:10pt}.c1{direction:ltr}.c10{margin-left:14.4pt}.c11{height:0pt}body{color:#000000;font-size:12pt;font-family:Verdana}h1{padding-top:4.5pt;line-height:1.0;text-align:left;color:#000000;font-size:18pt;font-family:Verdana;font-weight:bold;padding-bottom:4.5pt}h2{padding-top:4.5pt;line-height:1.0;text-align:left;color:#000000;font-style:italic;font-size:14pt;font-family:Verdana;font-weight:bold;padding-bottom:4.5pt}h3{padding-top:4.5pt;line-height:1.0;text-align:left;color:#000000;font-size:12pt;font-family:Verdana;font-weight:bold;padding-bottom:4.5pt}h4{padding-top:4.5pt;line-height:1.0;text-align:left;color:#000000;font-size:10pt;font-family:Verdana;font-weight:bold;padding-bottom:4.5pt}h5{padding-top:4.5pt;line-height:1.0;text-align:left;color:#000000;font-style:italic;font-size:8pt;font-family:Verdana;font-weight:bold;padding-bottom:4.5pt}h6{padding-top:4.5pt;line-height:1.0;text-align:left;color:#000000;font-size:8pt;font-family:Verdana;font-weight:bold;padding-bottom:4.5pt}
+</style>
+</head>
+<body class="c9">
+<p>
+	<span></span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c8">
+		<a href="#" name="id.89c16c4386dc"></a>
+		<p class="c14 c1">
+			<span class="c23">Ben Weeks</span><span class="c2"><br>
+			188 Boylston Street<br>
+			Jamaica Plain, MA 02130</span><span>&nbsp;</span>
+		</p>
+	</td>
+	<td class="c24">
+		<a href="#" name="id.1da3067b44da"></a>
+		<p class="c1">
+			<span class="c2">Cell (617) 858-4256<br>
+			E-Mail bweeks@gmail.com </span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<a href="#" name="id.84584a07f40f"></a>
+<p class="c1">
+	<span class="c7">Work Experience</span><span>&nbsp;</span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c22">
+		<p class="c1">
+			<span class="c3 c7 c2">Lorem Ipsum </span>
+		</p>
+	</td>
+	<td class="c6">
+		<p class="c1">
+			<span class="c3 c2">Cambridge, MA</span><span>&nbsp;</span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<p class="c13 c1">
+	<span class="c7 c2">Tech Support/Bookeseller </span><span class="c2">- </span><span class="c3 c2">December 2009&ndash;January 2011</span>
+</p>
+<p class="c13 c1">
+	<span class="c2">-Entered thousands of books into database for online sale.</span>
+</p>
+<p class="c13 c1">
+	<span class="c2">-Assisted customers in fulfilling book requests.</span>
+</p>
+<p class="c1 c13">
+	<span class="c7 c2">-</span><span class="c2">Created technology strategy to service customers in the Cambridge area.</span>
+</p>
+<p class="c13 c1 c21">
+	<span class="c2">-Organized storefront to optimize customer experience.</span><span class="c2">&nbsp;</span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c18">
+		<p class="c1">
+			<span class="c3 c7 c2">Harmonix Music Systems</span><span>&nbsp;</span>
+		</p>
+	</td>
+	<td class="c6">
+		<p class="c1">
+			<span class="c3 c2">Cambridge, MA</span><span>&nbsp;</span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<p class="c5 c1">
+	<span class="c7 c2">IT Coordinator - </span><span class="c3 c2">August 2008&ndash;November 2009</span><span class="c2">&nbsp;<br>
+	-Maintained network integrity through gateway management.<br>
+	-Fulfilled employee hardware requests in accordance with departmental budgetary concerns.<br>
+	-Developed web-based inventory management system. </span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c18">
+		<a href="#" name="id.f38979f10781"></a>
+		<p class="c1">
+			<span class="c3 c7 c2">The Berkman Center for Internet &amp; Society</span><span>&nbsp;</span>
+		</p>
+	</td>
+	<td class="c6">
+		<p class="c1">
+			<span class="c3 c2">Cambridge, MA</span><span>&nbsp;</span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<p class="c5 c1">
+	<span class="c7 c2">Junior Web Developer &ndash; StopBadware.org </span><span class="c2">- </span><a href="#" name="id.9292fa220d1f"></a><span class="c3 c2">August 2006&ndash;August 2008 </span><span class="c2"><br>
+	-Ensured consistent web updates in adherance to release schedules.<br>
+	-Maintained web front end for a community driven web security service effort.<br>
+	-Constructed and modified software and website guidelines for consumer needs.</span><span>&nbsp;</span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c15">
+		<a href="#" name="id.fb2a4aac1b30"></a>
+		<p class="c1">
+			<span class="c3 c7 c2">Computer Geeks </span>
+		</p>
+	</td>
+	<td class="c16">
+		<p class="c1">
+			<span class="c3 c2">Boston, MA</span><span>&nbsp;</span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<p class="c1 c5">
+	<span class="c7 c2">Computer Technician</span><span class="c2">&nbsp;- </span><a href="#" name="id.027815b23e5d"></a><span class="c3 c2">September 2005&ndash;March 2006 </span><span class="c2"><br>
+	-Provided on-site computer support for homes and small businesses.<br>
+	-Configured and maintained local networks for multiple businesses.</span><span>&nbsp;</span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c19">
+		<p class="c1">
+			<span class="c3 c7 c2">Curious George Goes to Wordsworth </span>
+		</p>
+	</td>
+	<td class="c17">
+		<p class="c1">
+			<span class="c3 c2">Cambridge, MA</span><span>&nbsp;</span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<p class="c1 c10">
+	<span class="c7 c2">Bookseller - </span><a href="#" name="id.f135710de46d"></a><span class="c3 c2">March 2005&ndash;October 2005 </span><span class="c2"><br>
+	-Managed inventory to provide customers with the best children&#39;s books and toys. </span>
+</p>
+<p class="c1 c10">
+	<span class="c2">-Organized and maintained inventory to allow easy retrieval of books.</span>
+</p>
+<p class="c5 c1">
+	<span class="c2">-Utilized knowledge of children&#39;s literature to assist customers with the purchase of books. </span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c19">
+		<a href="#" name="id.c685a8c352eb"></a>
+		<p class="c1">
+			<span class="c3 c2 c7">Pine Computers </span>
+		</p>
+	</td>
+	<td class="c17">
+		<p class="c1">
+			<span class="c3 c2">Burlington, VT</span><span>&nbsp;</span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<p class="c1 c10">
+	<span class="c7 c2">Computer Technician/Business Consultant </span><span class="c2">- </span><a href="#" name="id.7c582e7a23ef"></a><span class="c3 c2">March 2004&ndash;March 2005</span><span class="c2"><br>
+	-Implemented basic web technologies to create web presences for several small businesses.</span>
+</p>
+<p class="c5 c1">
+	<span class="c2">-Ensured consistent client support by creating informative repair rubrics.<br>
+	-Responded on the front-line for customer concerns and requests via telephone.</span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c19">
+		<p class="c1">
+			<span class="c3 c7 c2">Barnes and Noble Booksellers</span>
+		</p>
+	</td>
+	<td class="c17">
+		<p class="c1">
+			<span class="c3 c2">Burlington, VT</span><span>&nbsp;</span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<p class="c1 c10">
+	<span class="c7 c2">Bookseller - </span><span class="c2 c3">Seprember 2001&ndash;February 2004</span><span class="c7 c2">&nbsp;</span><span class="c2"><br>
+	-Assisted customers in picking appropriate titles amidst thousands of books.</span>
+</p>
+<p class="c1 c10">
+	<span class="c2">-Shelved and realphabatized sections according to their needs.</span>
+</p>
+<p class="c1 c10 c12">
+	<span class="c2">-Facilitated customer purchases through point-of-sale hardware/software. </span>
+</p>
+<p class="c1">
+	<span class="c7">Education</span><span>&nbsp;</span>
+</p>
+<table cellpadding="0" cellspacing="0" class="c4">
+<tbody>
+<tr class="c11">
+	<td class="c0">
+		<p class="c14 c1">
+			<a href="#" name="id.496a419f25d0"></a><span class="c3 c7 c2">Bunker Hill Community College </span>
+		</p>
+	</td>
+	<td class="c20">
+		<p class="c1">
+			<span class="c3 c2">Boston, MA</span><span>&nbsp;</span>
+		</p>
+	</td>
+</tr>
+</tbody>
+</table>
+<p class="c1 c10">
+	<span class="c7 c2">A.S. in Biomedical Engineering </span><span class="c2">- </span><span class="c3 c2">September 2010&ndash; May 2013</span>
+</p>
+<p class="c12 c1 c10">
+	<span class="c2">-Dean&#39;s List, Fall 2010.</span>
+</p>
+<a href="#" name="id.c3dfa1330dc7"></a>
+<p class="c1">
+	<span class="c7">Other Skills</span><span>&nbsp;</span>
+</p>
+<p class="c1 c10">
+	<span class="c2">-Experience with HTML, CSS, Ruby, PHP, JavaScript and Ubuntu Linux internals.</span><span>&nbsp;</span>
+</p>
+<p class="c1 c10">
+	<span class="c2">-Long standing retail book knowledge.</span>
+</p>
+<p class="c12 c1 c10">
+	<span class="c2">-Competent in Adobe Photoshop, Adobe Illustrator, and the Microsoft Office Suite.</span>
+</p>
+<p class="c1 c10 c14">
+	<span class="c3 c7 c2">**References Available Upon Request**</span><span>&nbsp;</span>
+</p>
+</body>
+</html>
+	<span class="c2">-Long standing retail book knowledge.</span>
+</p>
+<p class="c12 c1 c10">
+	<span class="c2">-Competent in Adobe Photoshop, Adobe Illustrator, and the Microsoft Office Suite.</span>
+</p>
+<p class="c1 c10 c14">
+	<span class="c3 c7 c2">**References Available Upon Request**</span><span>&nbsp;</span>
+</p>
+</body>
+</html>
