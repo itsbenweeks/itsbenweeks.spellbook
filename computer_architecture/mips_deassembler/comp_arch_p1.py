@@ -60,6 +60,6 @@ for i in instructions:
     if not opcode:
         print "{:x} {} ${}, ${}, ${}".format(pc, functions[function], destreg, src1reg, src2reg)
     elif (opcodes[opcode] in ('bne', 'beq')):
-        print "{:x} {} ${}, ${}, address {:x}".format(pc, opcodes[opcode], src1reg, src2reg, pc + offset * 4)
+        print "{:x} {} ${}, ${}, address {:x}".format(pc, opcodes[opcode], src1reg, src2reg, pc + offset * 4 + 4)
     else:
         print "{:x} {} ${}, {}(${})".format(pc, opcodes[opcode], src2reg, offset, src1reg)
