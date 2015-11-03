@@ -21,8 +21,9 @@ class Cmd(object):
 
     def get_action(self):
         action = raw_input("(R)ead, (W)rite, or (D)isplay Cache?\n")
+        if action is '':
+            action = 'q'
         return action.lower()[0]
-        return
 
     def read_address(self, address):
         result = self.cache.read_address(address)

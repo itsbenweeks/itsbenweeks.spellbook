@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 Benjamin Weeks
-CS472 Project 1
-September, 22nd, 2015
+CS472 Project 2
+October, 12th, 2015
 """
 MAIN_MEMORY = []
 for x in xrange(2048):
@@ -18,6 +18,7 @@ class Slot(object):
         self.valid = 0
         self.tag = 0
         self.data = []
+        self.dirty = 0
         for x in xrange(16):
             self.data.append(0)
 
@@ -32,26 +33,45 @@ class Slot(object):
 
     def read_slot(self, address):
         tag = (address & (0b111 << 8)) >> 8
-        result = [MAIN_MEMORY[address]]
         if self.check_hit(tag):
+            result = [self.data[address & 0xf]]
             result.append("Cache Hit")
         else:
+            if self.dirty:
+                self.update_memory(address)
             for x in xrange(len(self.data)):
                 self.data[x] = MAIN_MEMORY[(address >> 4 << 4) + x]
             self.tag = tag
             self.valid = 1
+            self.dirty = 0
+            result = [self.data[address & 0xf]]
             result.append("Cache Miss")
         return result
 
     def write_slot(self, address, datum):
         tag = (address & (0b111 << 8)) >> 8
         if self.check_hit(tag):
-            self.data[address & 0b1111] = datum
-            MAIN_MEMORY[address] = datum
+            self.data[address & 0xf] = datum
+            self.dirty = 1
             return "Cache Hit"
         else:
+            if self.dirty:
+                self.update_memory(address)
+            for x in xrange(len(self.data)):
+                self.data[x] = MAIN_MEMORY[(address >> 4 << 4) + x]
+            self.data[address & 0xf] = datum
             self.tag = tag
+            self.valid = 1
+            self.dirty = 1
             return "Cache Miss"
+
+    def update_memory(self, address):
+            slot = (address >> 4) & 0xf
+            tag = self.tag
+            old_address = (slot << 4) + (tag << 8)
+            for x in xrange(len(self.data)):
+                MAIN_MEMORY[old_address + x] = self.data[x]
+            return address
 
 
 class Cache(object):
@@ -77,8 +97,10 @@ class Cache(object):
 
     def read_address(self, address):
         slot = self.get_slot(address)
-        return slot.read_slot(address)
+        result = slot.read_slot(address)
+        return result
 
     def write_address(self, address, datum):
         slot = self.get_slot(address)
-        return slot.write_slot(address, datum)
+        result = slot.write_slot(address, datum)
+        return result
