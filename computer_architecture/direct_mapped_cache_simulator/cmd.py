@@ -8,55 +8,53 @@ November, 1st, 2015
 Command Line Interface
 """
 
-from main import Cache
+from cache import Cache
 
 
 class Cmd(object):
     def __init__(self):
         self.cache = Cache()
 
-
-    def get_address(statement):
-        address = raw_input("What address would you like {}\n?".format(statement))
+    def get_address(self, statement):
+        address = raw_input("What address would you like {}?\n".format(statement))
         return address
 
-
-    def get_action():
+    def get_action(self):
         action = raw_input("(R)ead, (W)rite, or (D)isplay Cache?\n")
-        return action
+        return action.lower()[0]
         return
-
 
     def read_address(self, address):
         result = self.cache.read_address(address)
-        print "At that byte there is the value {0:x} ({1})".format(result)
+        print "At that byte there is the value {0:X} ({1})".format(result[0],
+                                                                   result[1])
         return
-
 
     def write_data(self, address):
         datum = raw_input("What datum would you like to write at that address?\n")
         datum = int(datum, 16)
-        self.cache.write_address(address, datum)
-        print ("Value {:x} has been written to address {:x}.".format(datum, address))
+        result = self.cache.write_address(address, datum)
+        print ("Value {:X} has been written to address {:X}. ({})".format(
+            datum,
+            address,
+            result))
         return
-
 
     def display_cache(self):
         print str(self.cache)
         return
 
-
     def run(self):
         while True:
-            action = get_action()[0].lower()
+            action = self.get_action()
             if action == "r":
-                address = int(get_address("read"), 16)
-                read_address(self, address)
+                address = int(self.get_address("read"), 16)
+                self.read_address(address)
             elif action == "w":
-                address = int(get_address("to write to"), 16)
-                write_data(self, address)
+                address = int(self.get_address("to write to"), 16)
+                self.write_data(address)
             elif action == "d":
-                display_cache(self)
+                self.display_cache()
             else:
                 break
         return
