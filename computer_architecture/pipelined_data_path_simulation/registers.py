@@ -113,6 +113,7 @@ class IDEXRegister(Register):
         else:
             result = """Control: RegDst={}, ALUSrc={}, ALUOp={:b}, MemRead={}, MemWrite={},
  Branch={}, MemToReg={}, RegWrite={}, [{}]
+
 Incr PC = {}  ReadReg1Value = {} ReadReg2Value = {}
 SEOffset = {} WriteReg_20_16 = {} WriteReg_15_11 = {} Function = {}
             """.format(self._x_or_decimal(self.reg_dst),
@@ -162,6 +163,7 @@ class EXMEMRegister(Register):
         else:
             # TODO: Handle Branch Target Address when None
             result = """Control: MemRead={}, MemWrite={}, Branch={}, MemToReg={}, RegWrite={}, [{}]
+
 CalcBTA = {} Zero = {} ALUResult = {:05x}
 SWValue = {:05x} WriteRegNum = {}
             """.format(self.mem_read,
@@ -201,6 +203,7 @@ class MEMWBRegister(Register):
             result = "Control = {0:#010x}".format(0)
         else:
             result = """Control: MemToReg={}, RegWrite={}, [{}]
+
 LWDataValue = {} ALUResult = {} WriteRegNum =
             """.format(self.mem_to_reg,
                        self.reg_write,
