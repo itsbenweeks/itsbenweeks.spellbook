@@ -21,13 +21,6 @@ FUNCTIONS = {
     0: 'nop'
 }
 
-# For inital testing from the packet
-OPERATIONS = {
-    0x20: 'add',
-    0x22: 'sub',
-    0x24: 'and',
-    0x25: 'or'
-}
 
 
 class Register(object):
