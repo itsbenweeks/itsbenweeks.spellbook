@@ -7,10 +7,6 @@ November, 22nd, 2015
 """
 
 OPCODES = {
-    0x4: 'beq',
-    0x5: 'bne',
-    0x23: 'lw',
-    0x2b: 'sw',
     0x20: 'lb',
     0x28: 'sb'
 }
@@ -19,14 +15,6 @@ FUNCTIONS = {
     0x20: 'add',
     0x22: 'sub',
     0: 'nop'
-}
-
-# For inital testing from the packet
-OPERATIONS = {
-    0x20: 'add',
-    0x22: 'sub',
-    0x24: 'and',
-    0x25: 'or'
 }
 
 
@@ -50,6 +38,12 @@ class Register(object):
             return 'X'
         else:
             return "{:d}".format(var)
+
+    def _x_or_hex_short(self, var):
+        if var is None:
+            return 'X'
+        else:
+            return "{:08X}".format(var & 0xFFFFFFFF)
 
     def _x_or_hex(self, var):
         if var is None:
@@ -118,23 +112,23 @@ class IDEXRegister(Register):
         if self.function == 0:
             result = "Control = {0:#010x}".format(0)
         else:
-            result = """Control: RegDst={}, ALUSrc={}, ALUOp={:b}, MemRead={}, MemWrite={},
- Branch={}, MemToReg={}, RegWrite={}, [{}]
-Incr PC = {:X}  ReadReg1Value = {} ReadReg2Value = {}
-SEOffset = {} WriteReg_20_16 = {} WriteReg_15_11 = {} Function = {}
-            """.format(self._x_or_decimal(self.reg_dst),
+            result = """Control: RegDst={}, ALUSrc={:x}, ALUOp={:b}, MemRead={:x}, MemWrite={:x},
+ Branch={:x}, MemToReg={}, RegWrite={:x}, [{}]
+Incr PC = {:X}  ReadReg1Value = {:x} ReadReg2Value = {:x}
+SEOffset = {} WriteReg_20_16 = {:d} WriteReg_15_11 = {:d} Function = {}
+            """.format(self._x_or_hex(self.reg_dst),
                        self.alu_src,
                        self.alu_op,
                        self.mem_read,
                        self.mem_write,
                        self.branch,
-                       self._x_or_decimal(self.mem_to_reg),
+                       self._x_or_hex(self.mem_to_reg),
                        self.reg_write,
                        self._operation(),
                        self.incr_pc,
                        self.read_reg1_value,
                        self.read_reg2_value,
-                       self._x_or_hex(self.se_offset),
+                       self._x_or_hex_short(self.se_offset),
                        self.write_reg_20_16,
                        self.write_reg_15_11,
                        self._x_or_hex(self.function))
@@ -168,8 +162,8 @@ class EXMEMRegister(Register):
             result = "Control = {0:#010x}".format(0)
         else:
             # TODO: Handle Branch Target Address when None
-            result = """Control: MemRead={}, MemWrite={}, Branch={}, MemToReg={}, RegWrite={:x}, [{}]
-CalcBTA = {} Zero = {} ALUResult = {:05x}
+            result = """Control: MemRead={:x}, MemWrite={:x}, Branch={:x}, MemToReg={}, RegWrite={:x}, [{}]
+CalcBTA = {} Zero = {:x} ALUResult = {:05x}
 SWValue = {:05x} WriteRegNum = {}
             """.format(self.mem_read,
                        self.mem_write,
@@ -195,7 +189,7 @@ class MEMWBRegister(Register):
     LWDataValue = mem contents @ 3000C ALUResult = 3000C WriteRegNum = 15"""
     def __init__(self):
         self.nop = True
-        self.mem_to_reg = None
+        self.mem_to_reg = False
         self.reg_write = False
         self.function = 0
         self.opcode = None
@@ -207,12 +201,12 @@ class MEMWBRegister(Register):
         if self.function == 0:
             result = "Control = {0:#010x}".format(0)
         else:
-            result = """Control: MemToReg={}, RegWrite={}, [{}]
-LWDataValue = {} ALUResult = {} WriteRegNum = {}
+            result = """Control: MemToReg={:x}, RegWrite={:x}, [{}]
+LWDataValue = {} ALUResult = {:x} WriteRegNum = {}
             """.format(self.mem_to_reg,
                        self.reg_write,
                        self._operation(),
                        self._x_or_hex(self.lw_data_value),
                        self.alu_result,
-                       self.write_reg_num)
+                       self._x_or_decimal(self.write_reg_num))
         return result

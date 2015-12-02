@@ -19,10 +19,12 @@ class Memory(object):
 
     def __str__(self):
         result = ""
+        x = 0
         for mem in self.memory:
-            if mem % 8 == 0:
+            if x % 8 == 0:
                 result += "\n"
             result += "{:>#5x},".format(mem)
+            x += 1
         return result
 
 
@@ -35,10 +37,12 @@ class Registers(object):
 
     def __str__(self):
         result = ""
+        x = 0
         for reg in self.registers:
-            if reg % 8 == 0:
+            if x % 8 == 0:
                 result += "\n"
             result += "{:>#6x},".format(reg)
+            x += 1
         return result
 
 
@@ -101,18 +105,12 @@ class Pipeline(object):
             return
 
         opcodes = {
-            0x4: 'beq',
-            0x5: 'bne',
             0x20: 'lb',
-            0x22: 'sb',
-            0x23: 'lw',
-            0x2b: 'sw'
+            0x28: 'sb',
         }
         functions = {
             0x20: 'add',
             0x22: 'sub',
-            0x24: 'and',
-            0x25: 'or',
             0: 'nop'
         }
 
@@ -131,33 +129,21 @@ class Pipeline(object):
         offset = c_short(instruction & offset_mask).value
 
         w_register.incr_pc = pc
-        w_register.inst = instruction_cache[pc]
+        w_register.inst = instruction
 
         if not opcode:
             w_register.opcode = None
             w_register.function = function
-            w_register.mips_inst = "{:x} {} ${}, ${}, ${}".format(
-                pc,
+            w_register.mips_inst = "{} ${}, ${}, ${}".format(
                 functions[function],
                 destreg,
                 src1reg,
                 src2reg)
 
-        elif (opcodes[opcode] in ('bne', 'beq')):
-            w_register.opcode = opcode
-            w_register.function = None
-            w_register.mips_inst = "{:x} {} ${}, ${}, address {:x}".format(
-                pc,
-                opcodes[opcode],
-                src1reg,
-                src2reg,
-                pc + offset * 4 + 4)
-
         else:
             w_register.opcode = opcode
             w_register.function = None
-            w_register.mips_inst = "{:x} {} ${}, {}(${})".format(
-                pc,
+            w_register.mips_inst = "{} ${}, {}(${})".format(
                 opcodes[opcode],
                 src2reg,
                 offset,
@@ -183,15 +169,14 @@ class Pipeline(object):
         w_register.function = r_register.function
         w_register.opcode = r_register.opcode
         w_register.incr_pc = r_register.incr_pc
-        src1reg_mask = 0b11111 << 21
-        src2reg_mask = 0b11111 << 16
-        destreg_mask = 0b11111 << 11
+        src1reg_mask = 0b11111
+        src2reg_mask = src1reg_mask
+        destreg_mask = src1reg_mask
         offset_mask = 0xffff
-        src1reg = (r_register.inst & src1reg_mask) >> 21
-        src2reg = (r_register.inst & src2reg_mask) >> 16
-        destreg = (r_register.inst & destreg_mask) >> 11
+        src1reg = (r_register.inst >> 21) & src1reg_mask
+        src2reg = (r_register.inst >> 16)  & src2reg_mask
+        destreg = (r_register.inst >> 11) & destreg_mask
         offset = c_short(r_register.inst & offset_mask).value
-        # TODO: research 2's compliment in python.
         w_register.read_reg1_value = self.cache_registers.registers[src1reg]
         w_register.read_reg2_value = registers[src2reg]
         w_register.write_reg_15_11 = destreg
@@ -208,7 +193,7 @@ class Pipeline(object):
             w_register.se_offset = None
             w_register.alu_op = (r_register.inst >> 4) & 0b11
 
-        elif "lw" in r_register.mips_inst:
+        elif "lb" in r_register.mips_inst:
             w_register.reg_dst = False
             w_register.alu_src = True
             w_register.mem_read = True
@@ -219,7 +204,7 @@ class Pipeline(object):
             w_register.se_offset = offset
             w_register.alu_op = 0
 
-        elif "sw" in r_register.mips_inst:
+        elif "sb" in r_register.mips_inst:
             w_register.reg_dst = 0
             w_register.alu_src = True
             w_register.mem_read = False
@@ -229,17 +214,6 @@ class Pipeline(object):
             w_register.branch = False
             w_register.se_offset = offset
             w_register.alu_op = 0
-
-        elif "beq" in r_register.mips_inst:
-            w_register.reg_dst = 0
-            w_register.alu_src = True
-            w_register.mem_read = False
-            w_register.mem_write = False
-            w_register.mem_to_reg = None
-            w_register.reg_write = False
-            w_register.branch = False
-            w_register.se_offset = offset
-            w_register.alu_op = 0b1
 
         return
 
@@ -276,13 +250,11 @@ class Pipeline(object):
 
         # Perform in the main ALU
         alu_op = r_register.alu_op
-        control_sig = None
-        alu_control = None
+        control_sig = r_register.function
+        alu_control = self._alu_control(control_sig, alu_op)
+        w_register.alu_result = self._alu(data1, data2, alu_control)
+        w_register.zero = w_register.alu_result == 0
         if r_register.se_offset is not None:
-            control_sig = r_register.se_offset & 0x3f
-            alu_control = self._alu_control(control_sig, alu_op)
-            w_register.alu_result = self._alu(data1, data2, alu_control)
-            w_register.zero = w_register.alu_result == 0
             w_register.calc_bta = r_register.incr_pc + (r_register.se_offset << 2)
 
         # Pass it on
@@ -307,9 +279,9 @@ class Pipeline(object):
         w_register = self.memwbregisters[0]
         main_memory = self.main_memory.memory
 
+        w_register.reg_write = r_register.reg_write
         w_register.alu_result = r_register.alu_result
         w_register.write_reg_num = r_register.write_reg_num
-        # write_data = None
         w_register.function = r_register.function
         w_register.opcode = r_register.opcode
 
@@ -322,11 +294,9 @@ class Pipeline(object):
             w_register.lw_data_value = None
 
         if r_register.mem_write:
-            # write_data = r_register.sw_value
-            # TODO: Learn what to do with the write_data variable
+            print r_register.sw_value
+            main_memory[r_register.alu_result] = r_register.sw_value
             pass
-        else:
-            w_register.write_reg_num = r_register.write_reg_num
 
         return
 
@@ -336,24 +306,22 @@ class Pipeline(object):
         READ version of MEM_WB.
         """
         r_register = self.memwbregisters[1]
+        registers = self.cache_registers.registers
         if r_register.function == 0:
             return
 
-        result = None
-
         if r_register.reg_write:
             if r_register.mem_to_reg:
-                result = r_register.alu_result
+                registers[r_register.write_reg_num] = r_register.lw_data_value
             else:
-                result = r_register.lw_data_value
-            self.cache_registers[r_register.write_reg_num] = result
+                registers[r_register.write_reg_num] = r_register.alu_result
         return
 
     def print_out_everything(self):
-        # print "{:*^60}".format("Main Memory")
-        # print str(self.main_memory)
-        # print "{:*^60}".format("Registers")
-        # print str(self.cache_registers)
+        print "{:*^60}".format("Main Memory")
+        print str(self.main_memory)
+        print "{:*^60}".format("Registers")
+        print str(self.cache_registers)
         print "{:*^60}".format("IF/ID Write Register")
         print str(self.ifidregisters[0])
         print "{:*^60}".format("IF/ID Read Register")
