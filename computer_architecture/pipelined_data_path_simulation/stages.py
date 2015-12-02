@@ -8,6 +8,7 @@ November, 22nd, 2015
 
 from ctypes import c_short
 from registers import *
+from copy import deepcopy
 
 
 class Memory(object):
@@ -172,6 +173,7 @@ class Pipeline(object):
         """
         r_register = self.ifidregisters[1]
         w_register = self.idexregisters[0]
+        registers = self.cache_registers.registers
 
         if r_register.function == 0:
             w_register.function = r_register.function
@@ -191,7 +193,7 @@ class Pipeline(object):
         offset = c_short(r_register.inst & offset_mask).value
         # TODO: research 2's compliment in python.
         w_register.read_reg1_value = self.cache_registers.registers[src1reg]
-        w_register.read_reg2_value = self.cache_registers.registers[src2reg]
+        w_register.read_reg2_value = registers[src2reg]
         w_register.write_reg_15_11 = destreg
         w_register.write_reg_20_16 = src2reg
 
@@ -276,9 +278,6 @@ class Pipeline(object):
         alu_op = r_register.alu_op
         control_sig = None
         alu_control = None
-        w_register.alu_result = None
-        w_register.zero = None
-        w_register.calc_bta = None
         if r_register.se_offset is not None:
             control_sig = r_register.se_offset & 0x3f
             alu_control = self._alu_control(control_sig, alu_op)
@@ -306,12 +305,13 @@ class Pipeline(object):
         """
         r_register = self.exmemregisters[1]
         w_register = self.memwbregisters[0]
+        main_memory = self.main_memory.memory
+
         w_register.alu_result = r_register.alu_result
         w_register.write_reg_num = r_register.write_reg_num
         # write_data = None
         w_register.function = r_register.function
         w_register.opcode = r_register.opcode
-        main_memory = self.main_memory.memory
 
         if w_register.function == 0:
             return
@@ -350,10 +350,10 @@ class Pipeline(object):
         return
 
     def print_out_everything(self):
-        print "{:*^60}".format("Main Memory")
-        print str(self.main_memory)
-        print "{:*^60}".format("Registers")
-        print str(self.cache_registers)
+        # print "{:*^60}".format("Main Memory")
+        # print str(self.main_memory)
+        # print "{:*^60}".format("Registers")
+        # print str(self.cache_registers)
         print "{:*^60}".format("IF/ID Write Register")
         print str(self.ifidregisters[0])
         print "{:*^60}".format("IF/ID Read Register")
@@ -373,8 +373,8 @@ class Pipeline(object):
         return
 
     def copy_write_to_read(self):
-        self.ifidregisters[1] = self.ifidregisters[0]
-        self.idexregisters[1] = self.idexregisters[0]
-        self.exmemregisters[1]  = self.exmemregisters[0]
-        self.memwbregisters[1]  = self.memwbregisters[0]
+        self.ifidregisters[1] = deepcopy(self.ifidregisters[0])
+        self.idexregisters[1] = deepcopy(self.idexregisters[0])
+        self.exmemregisters[1]  = deepcopy(self.exmemregisters[0])
+        self.memwbregisters[1]  = deepcopy(self.memwbregisters[0])
         return

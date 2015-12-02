@@ -21,17 +21,22 @@ INSTRUCTIONS = {
 }
 
 pipeline = Pipeline()
-i = 0
+i = 1
+pc = 0x7A000
 for key in INSTRUCTIONS.keys():
     title = "CYCLE {}".format(i)
     print "{:#^60}".format(title)
-    pipeline.if_stage(INSTRUCTIONS, key)
+    pipeline.if_stage(INSTRUCTIONS, pc)
     pipeline.id_stage()
     pipeline.ex_stage()
     pipeline.mem_stage()
     pipeline.wb_stage()
+    print "{:-^60}".format("Pre Copy")
     pipeline.print_out_everything()
     pipeline.copy_write_to_read()
+    print "{:-^60}".format("Post Copy")
+    pipeline.print_out_everything()
+    pc += 4
     i += 1
 
 print "IT'S OVER!"

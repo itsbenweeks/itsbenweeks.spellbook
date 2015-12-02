@@ -21,6 +21,13 @@ FUNCTIONS = {
     0: 'nop'
 }
 
+# For inital testing from the packet
+OPERATIONS = {
+    0x20: 'add',
+    0x22: 'sub',
+    0x24: 'and',
+    0x25: 'or'
+}
 
 
 class Register(object):
@@ -48,7 +55,7 @@ class Register(object):
         if var is None:
             return 'X'
         else:
-            return "{}".format(hex(var))
+            return "{:x}".format(var)
 
     def _x_or_string(self, var):
         if var is None:
@@ -113,8 +120,7 @@ class IDEXRegister(Register):
         else:
             result = """Control: RegDst={}, ALUSrc={}, ALUOp={:b}, MemRead={}, MemWrite={},
  Branch={}, MemToReg={}, RegWrite={}, [{}]
-
-Incr PC = {}  ReadReg1Value = {} ReadReg2Value = {}
+Incr PC = {:X}  ReadReg1Value = {} ReadReg2Value = {}
 SEOffset = {} WriteReg_20_16 = {} WriteReg_15_11 = {} Function = {}
             """.format(self._x_or_decimal(self.reg_dst),
                        self.alu_src,
@@ -153,7 +159,7 @@ class EXMEMRegister(Register):
         self.opcode = None
         self.calc_bta = None
         self.zero = False
-        self.alu_result = None
+        self.alu_result = 0
         self.sw_value = 0
         self.write_reg_num = None
 
@@ -162,8 +168,7 @@ class EXMEMRegister(Register):
             result = "Control = {0:#010x}".format(0)
         else:
             # TODO: Handle Branch Target Address when None
-            result = """Control: MemRead={}, MemWrite={}, Branch={}, MemToReg={}, RegWrite={}, [{}]
-
+            result = """Control: MemRead={}, MemWrite={}, Branch={}, MemToReg={}, RegWrite={:x}, [{}]
 CalcBTA = {} Zero = {} ALUResult = {:05x}
 SWValue = {:05x} WriteRegNum = {}
             """.format(self.mem_read,
@@ -203,8 +208,7 @@ class MEMWBRegister(Register):
             result = "Control = {0:#010x}".format(0)
         else:
             result = """Control: MemToReg={}, RegWrite={}, [{}]
-
-LWDataValue = {} ALUResult = {} WriteRegNum =
+LWDataValue = {} ALUResult = {} WriteRegNum = {}
             """.format(self.mem_to_reg,
                        self.reg_write,
                        self._operation(),
