@@ -69,13 +69,13 @@ class Pipeline(object):
                 return 0b0110
         if function == 0b100000:
             return 0b0010
-        if function == 0b100000:
+        elif function == 0b100010:
             return 0b0110
-        if function == 0b100000:
+        elif function == 0b100100:
             return 0b0000
-        if function == 0b100000:
+        elif function == 0b100101:
             return 0b0001
-        if function == 0b100000:
+        elif function == 0b101010:
             return 0b0111
 
     def _alu(self, data1, data2, alu_control=0b0010):
@@ -289,13 +289,13 @@ class Pipeline(object):
             return
 
         if r_register.mem_read:
-            w_register.lw_data_value = main_memory[r_register.alu_result]
+            w_register.lw_data_value = deepcopy(main_memory[r_register.alu_result])
         else:
             w_register.lw_data_value = None
 
         if r_register.mem_write:
-            print r_register.sw_value
-            main_memory[r_register.alu_result] = r_register.sw_value
+            print "writing {} to mem addr {}".format(hex(r_register.sw_value),r_register.alu_result)
+            main_memory[r_register.alu_result] = deepcopy(r_register.sw_value)
             pass
 
         return
@@ -307,36 +307,39 @@ class Pipeline(object):
         """
         r_register = self.memwbregisters[1]
         registers = self.cache_registers.registers
+
         if r_register.function == 0:
             return
 
         if r_register.reg_write:
             if r_register.mem_to_reg:
-                registers[r_register.write_reg_num] = r_register.lw_data_value
+                print "writing {} to reg addr {}".format(hex(r_register.lw_data_value),r_register.write_reg_num)
+                registers[r_register.write_reg_num] = deepcopy(r_register.lw_data_value)
             else:
-                registers[r_register.write_reg_num] = r_register.alu_result
+                print "writing {} to reg addr {}".format(hex(r_register.alu_result),r_register.write_reg_num)
+                registers[r_register.write_reg_num] = deepcopy(r_register.alu_result)
         return
 
     def print_out_everything(self):
-        print "{:*^60}".format("Main Memory")
-        print str(self.main_memory)
-        print "{:*^60}".format("Registers")
+        # print "{:*^72}".format("Main Memory")
+        # print str(self.main_memory)
+        print "{:*^72}".format("Registers")
         print str(self.cache_registers)
-        print "{:*^60}".format("IF/ID Write Register")
+        print "{:*^72}".format("IF/ID Write Register")
         print str(self.ifidregisters[0])
-        print "{:*^60}".format("IF/ID Read Register")
+        print "{:*^72}".format("IF/ID Read Register")
         print str(self.ifidregisters[1])
-        print "{:*^60}".format("ID/EX Write Register")
+        print "{:*^72}".format("ID/EX Write Register")
         print str(self.idexregisters[0])
-        print "{:*^60}".format("ID/EX Read Register")
+        print "{:*^72}".format("ID/EX Read Register")
         print str(self.idexregisters[1])
-        print "{:*^60}".format("EX/MEM Write Register")
+        print "{:*^72}".format("EX/MEM Write Register")
         print str(self.exmemregisters[0])
-        print "{:*^60}".format("EX/MEM Read Register")
+        print "{:*^72}".format("EX/MEM Read Register")
         print str(self.exmemregisters[1])
-        print "{:*^60}".format("MEM/WB Write Register")
+        print "{:*^72}".format("MEM/WB Write Register")
         print str(self.memwbregisters[0])
-        print "{:*^60}".format("MEM/WB Read Register")
+        print "{:*^72}".format("MEM/WB Read Register")
         print str(self.memwbregisters[1])
         return
 

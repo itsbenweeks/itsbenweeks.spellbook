@@ -163,8 +163,8 @@ class EXMEMRegister(Register):
         else:
             # TODO: Handle Branch Target Address when None
             result = """Control: MemRead={:x}, MemWrite={:x}, Branch={:x}, MemToReg={}, RegWrite={:x}, [{}]
-CalcBTA = {} Zero = {:x} ALUResult = {:05x}
-SWValue = {:05x} WriteRegNum = {}
+CalcBTA = {} Zero = {:x} ALUResult = {:x}
+SWValue = {:x} WriteRegNum = {}
             """.format(self.mem_read,
                        self.mem_write,
                        self.branch,
