@@ -49,7 +49,6 @@ for i in instructions:
     destreg = (i & destreg_mask) >> 11
     function = i & function_mask
     offset = c_short(i & offset_mask).value
-    '''
     print """pc = {:x}
     opcode = {:x}
     src1reg = {}
@@ -57,7 +56,6 @@ for i in instructions:
     destreg = {}
     function = {:x}
     offset ={}""".format(pc, opcode, src1reg, src2reg, destreg, function, offset)
-    '''
     if not opcode:
         print "{:x} {} ${}, ${}, ${}".format(pc, functions[function], destreg, src1reg, src2reg)
     elif (opcodes[opcode] in ('bne', 'beq')):
