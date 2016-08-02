@@ -29,7 +29,7 @@ CREATE TABLE "CUSTOMER" (
 
 CREATE TABLE "ITEM" (
   "ItemSKU" varchar2(11) primary key,
-  "ItemName" varchar2(40),
+  "ItemName" varchar2(140),
   "Size" varchar2(25),
   "Color" varchar2(25)
 );
