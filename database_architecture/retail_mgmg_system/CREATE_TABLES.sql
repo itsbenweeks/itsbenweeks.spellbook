@@ -24,7 +24,7 @@ CREATE TABLE "CUSTOMER" (
   "Address" varchar2(40),
   "City" varchar2(25),
   "ZipCode" varchar2(9),
-  "TelephoneNumber" varchar2(13)
+  "TelephoneNumber" varchar2(17)
 );
 
 CREATE TABLE "ITEM" (
@@ -60,5 +60,5 @@ CREATE TABLE "VENDOR" (
   "Address" varchar2(40),
   "City" varchar2(25),
   "ZipCode" varchar2(9),
-  "TelephoneNumber" varchar2(13)
+  "TelephoneNumber" varchar2(17)
 );
