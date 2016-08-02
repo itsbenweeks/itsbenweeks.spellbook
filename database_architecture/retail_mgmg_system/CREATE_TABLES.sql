@@ -2,7 +2,7 @@ CREATE TABLE "EMPLOYEE" (
   "EmployeeID" varchar2(9) primary key,
   "FirstName" varchar2(25),
   "LastName" varchar2(25),
-  "SSN" varchar2(9)
+  "SSN" varchar2(11)
 );
 
 CREATE TABLE "ORDER" (
