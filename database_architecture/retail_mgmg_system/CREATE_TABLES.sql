@@ -21,9 +21,9 @@ CREATE TABLE "CUSTOMER" (
   "CustomerID" varchar2(6) primary key,
   "FirstName" varchar2(25),
   "LastName" varchar2(25),
-  "Address" varchar2(40),
+  "Address" varchar2(60),
   "City" varchar2(25),
-  "ZipCode" varchar2(9),
+  "ZipCode" varchar2(13),
   "TelephoneNumber" varchar2(17)
 );
 
@@ -57,8 +57,8 @@ CREATE TABLE "VENDOR" (
   "VendorID" varchar2(6) primary key,
   "FirstName" varchar2(25),
   "LastName" varchar2(25),
-  "Address" varchar2(40),
+  "Address" varchar2(60),
   "City" varchar2(25),
-  "ZipCode" varchar2(9),
+  "ZipCode" varchar2(13),
   "TelephoneNumber" varchar2(17)
 );
