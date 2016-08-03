@@ -36,7 +36,7 @@ CREATE TABLE "ITEM" (
 
 CREATE TABLE "INVENTORY" (
   "ItemSKU" varchar2(11),
-  "Location" varchar2(40)
+  "Location" varchar2(40),
   "Quantity" number(3),
   primary key("ItemSKU", "Location"),
   foreign key ("ItemSKU") references ITEM("ItemSKU")
