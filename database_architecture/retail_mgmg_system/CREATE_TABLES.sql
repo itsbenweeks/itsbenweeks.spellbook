@@ -1,24 +1,24 @@
 CREATE TABLE "EMPLOYEE" (
-  "EmployeeID" varchar2(9) primary key,
+  "EmployeeID" number primary key,
   "FirstName" varchar2(25),
   "LastName" varchar2(25),
   "SSN" varchar2(11)
 );
 
 CREATE TABLE "ORDER" (
-  "OrderID" varchar2(6) primary key,
+  "OrderID" number primary key,
   "Date" date,
   "Quantity" number(3),
   "ItemSKU" varchar2(11),
-  "CustomerID" varchar2(6),
-  "EmployeeID" varchar2(9),
+  "CustomerID" number,
+  "EmployeeID" number,
   foreign key ("ItemSKU") references ITEM("ItemSKU"),
   foreign key ("CustomerID") references CUSTOMER("CustomerID"),
   foreign key ("EmployeeID") references EMPLOYEE("EmployeeID")
 );
 
 CREATE TABLE "CUSTOMER" (
-  "CustomerID" varchar2(6) primary key,
+  "CustomerID" number primary key,
   "FirstName" varchar2(25),
   "LastName" varchar2(25),
   "Address" varchar2(60),
