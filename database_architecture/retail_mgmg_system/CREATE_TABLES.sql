@@ -47,7 +47,7 @@ CREATE TABLE "PURCHASE" (
   "VendorID" varchar2(25),
   "ItemSKU" varchar2(11),
   "PurchaseDate" date,
-  "PurchaseReceive" date
+  "PurchaseReceive" date,
   "Available" number(3),
   foreign key ("ItemSKU") references ITEM("ItemSKU"),
   foreign key ("VendorID") references VENDOR("VendorID")
