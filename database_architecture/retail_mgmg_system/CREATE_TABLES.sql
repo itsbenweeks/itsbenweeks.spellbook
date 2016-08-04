@@ -22,7 +22,7 @@ CREATE TABLE "CUSTOMER" (
   "FirstName" varchar2(25),
   "LastName" varchar2(25),
   "Address" varchar2(60),
-  "City" varchar2(25),
+  "City" varchar2(40),
   "ZipCode" varchar2(13),
   "TelephoneNumber" varchar2(17)
 );
