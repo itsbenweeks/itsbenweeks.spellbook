@@ -16,6 +16,13 @@ from INVENTORY, ITEM
 Where INVENTORY."ItemSKU" = ITEM."ItemSKU" and INVENTORY."ItemSKU" = '&SK';
 
 
+-- Search for Item Name using SKU--
+
+Select "ItemName","Size" 
+from  ITEM
+Where ITEM."ItemSKU" = '&SKU';
+
+
 -- Update Inventory quantities for an Item--
 UPDATE INVENTORY 
 SET "Quantity" = '&Quantity'
