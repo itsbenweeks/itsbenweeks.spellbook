@@ -9,3 +9,9 @@ Select "CustomerID"
 from Customer
 Where "FirstName" = '&FN' and "LastName" = '&LN';
 
+
+-- Search for Available Quantity in Inventory for an Item--
+Select "ItemName","Quantity" 
+from INVENTORY, ITEM
+Where INVENTORY."ItemSKU" = ITEM."ItemSKU" and INVENTORY."ItemSKU" = '&SK';
+
