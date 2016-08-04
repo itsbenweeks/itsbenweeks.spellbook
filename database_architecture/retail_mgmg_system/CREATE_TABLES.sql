@@ -33,32 +33,26 @@ CREATE TABLE "ITEM" (
 );
 
 CREATE TABLE "INVENTORY" (
-  "ItemSKU" varchar2(11),
+  "ItemSKU" varchar2(11) references ITEM("ItemSKU"),
   "Location" varchar2(40),
   "Quantity" number(3),
   primary key("ItemSKU", "Location"),
-  foreign key ("ItemSKU") references ITEM("ItemSKU")
 );
 
 CREATE TABLE "PURCHASE" (
   "PurchaseID" number primary key,
-  "VendorID" number,
-  "ItemSKU" varchar2(11),
+  "VendorID" number references VENDOR("VendorID"),
+  "ItemSKU" varchar2(11) references ITEM("ItemSKU"),
   "PurchaseDate" date,
   "PurchaseReceive" date,
   "Available" number(3),
-  foreign key ("ItemSKU") references ITEM("ItemSKU"),
-  foreign key ("VendorID") references VENDOR("VendorID")
 );
 
 CREATE TABLE "ORDER" (
   "OrderID" number primary key,
   "Date" date,
   "Quantity" number(3),
-  "ItemSKU" varchar2(11),
-  "CustomerID" number,
-  "EmployeeID" number,
-  foreign key ("ItemSKU") references ITEM("ItemSKU"),
-  foreign key ("CustomerID") references CUSTOMER("CustomerID"),
-  foreign key ("EmployeeID") references EMPLOYEE("EmployeeID")
+  "ItemSKU" varchar2(11) references ITEM("ItemSKU"),
+  "CustomerID" number references CUSTOMER("CustomerID"),
+  "EmployeeID" number references EMPLOYEE("EmployeeID"),
 );
