@@ -1,15 +1,3 @@
-Possible Queries
-
-query to get inventory count
-query to get customer name
-query to get customer number
-query to get order place by customer
-trigger to remove from inventory
-update statement to increase inventory
-update statement for customer table
-
-
-
 --- Search for Customer Info from Customer Name
 Select * 
 from CUSTOMER
