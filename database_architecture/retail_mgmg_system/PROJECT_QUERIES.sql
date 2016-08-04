@@ -15,3 +15,9 @@ Select "ItemName","Quantity"
 from INVENTORY, ITEM
 Where INVENTORY."ItemSKU" = ITEM."ItemSKU" and INVENTORY."ItemSKU" = '&SK';
 
+
+-- Update Inventory quantities for an Item--
+UPDATE INVENTORY 
+SET "Quantity" = '&Quantity'
+WHERE INVENTORY."ItemSKU" = '&SKU';
+
