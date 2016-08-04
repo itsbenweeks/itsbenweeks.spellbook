@@ -5,25 +5,23 @@ CREATE TABLE "EMPLOYEE" (
   "SSN" varchar2(11)
 );
 
-CREATE TABLE "ORDER" (
-  "OrderID" number primary key,
-  "Date" date,
-  "Quantity" number(3),
-  "ItemSKU" varchar2(11),
-  "CustomerID" number,
-  "EmployeeID" number,
-  foreign key ("ItemSKU") references ITEM("ItemSKU"),
-  foreign key ("CustomerID") references CUSTOMER("CustomerID"),
-  foreign key ("EmployeeID") references EMPLOYEE("EmployeeID")
-);
-
 CREATE TABLE "CUSTOMER" (
   "CustomerID" number primary key,
   "FirstName" varchar2(25),
   "LastName" varchar2(25),
   "Address" varchar2(60),
   "City" varchar2(40),
-  "ZipCode" varchar2(13),
+  "ZipCode" varchar2(14),
+  "TelephoneNumber" varchar2(17)
+);
+
+CREATE TABLE "VENDOR" (
+  "VendorID" number primary key,
+  "FirstName" varchar2(25),
+  "LastName" varchar2(25),
+  "Address" varchar2(60),
+  "City" varchar2(25),
+  "ZipCode" varchar2(14),
   "TelephoneNumber" varchar2(17)
 );
 
@@ -43,8 +41,8 @@ CREATE TABLE "INVENTORY" (
 );
 
 CREATE TABLE "PURCHASE" (
-  "PurchaseID" varchar2(25) primary key,
-  "VendorID" varchar2(25),
+  "PurchaseID" number primary key,
+  "VendorID" number,
   "ItemSKU" varchar2(11),
   "PurchaseDate" date,
   "PurchaseReceive" date,
@@ -53,12 +51,14 @@ CREATE TABLE "PURCHASE" (
   foreign key ("VendorID") references VENDOR("VendorID")
 );
 
-CREATE TABLE "VENDOR" (
-  "VendorID" varchar2(6) primary key,
-  "FirstName" varchar2(25),
-  "LastName" varchar2(25),
-  "Address" varchar2(60),
-  "City" varchar2(25),
-  "ZipCode" varchar2(13),
-  "TelephoneNumber" varchar2(17)
+CREATE TABLE "ORDER" (
+  "OrderID" number primary key,
+  "Date" date,
+  "Quantity" number(3),
+  "ItemSKU" varchar2(11),
+  "CustomerID" number,
+  "EmployeeID" number,
+  foreign key ("ItemSKU") references ITEM("ItemSKU"),
+  foreign key ("CustomerID") references CUSTOMER("CustomerID"),
+  foreign key ("EmployeeID") references EMPLOYEE("EmployeeID")
 );
