@@ -36,7 +36,7 @@ CREATE TABLE "INVENTORY" (
   "ItemSKU" varchar2(11) references ITEM("ItemSKU"),
   "Location" varchar2(40),
   "Quantity" number(3),
-  primary key("ItemSKU", "Location"),
+  primary key("ItemSKU", "Location")
 );
 
 CREATE TABLE "PURCHASE" (
@@ -45,7 +45,7 @@ CREATE TABLE "PURCHASE" (
   "ItemSKU" varchar2(11) references ITEM("ItemSKU"),
   "PurchaseDate" date,
   "PurchaseReceive" date,
-  "Available" number(3),
+  "Available" number(3)
 );
 
 CREATE TABLE "ORDER" (
@@ -54,5 +54,5 @@ CREATE TABLE "ORDER" (
   "Quantity" number(3),
   "ItemSKU" varchar2(11) references ITEM("ItemSKU"),
   "CustomerID" number references CUSTOMER("CustomerID"),
-  "EmployeeID" number references EMPLOYEE("EmployeeID"),
+  "EmployeeID" number references EMPLOYEE("EmployeeID")
 );
