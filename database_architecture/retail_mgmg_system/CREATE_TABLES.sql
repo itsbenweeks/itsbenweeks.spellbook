@@ -44,7 +44,7 @@ CREATE TABLE "VENDOR" (
 );
 CREATE sequence vendor_id_seq start with 1 increment by 1;
 CREATE trigger trg_vendor_id
-  before insert on VendorID
+  before insert on "VendorID"
   for each row
     begin
           select vendor_id_seq.nextval
