@@ -33,3 +33,9 @@ WHERE INVENTORY."ItemSKU" = '&SKU';
 Select "OrderID", ITEM."ItemSKU", ITEM."ItemName", CUSTOMER."CustomerID"
 from "ORDER", CUSTOMER, ITEM
 where "ORDER"."CustomerID" = CUSTOMER."CustomerID" and "ORDER"."ItemSKU" = ITEM."ItemSKU" and CUSTOMER."CustomerID" = &CustomerID ; 
+
+
+-- Query to get inventory count--
+select INVENTORY."ItemSKU", sum(INVENTORY."Quantity") as "Quantity"
+from INVENTORY 
+group by INVENTORY."ItemSKU";
