@@ -6,7 +6,7 @@ CREATE TABLE "EMPLOYEE" (
 );
 create sequence employee_id_seq start with 1 increment by 1;
 create trigger trg_employee_id
-  before insert on "EmployeeID"
+  before insert on EMPLOYEE
   for each row
     begin
           select employee_id_seq.nextval
@@ -25,7 +25,7 @@ CREATE TABLE "CUSTOMER" (
 );
 CREATE sequence customer_id_seq start with 1 increment by 1;
 CREATE trigger trg_customer_id
-  before insert on "CustomerID"
+  before insert on CUSTOMER
   for each row
     begin
           select customer_id_seq.nextval
@@ -44,7 +44,7 @@ CREATE TABLE "VENDOR" (
 );
 CREATE sequence vendor_id_seq start with 1 increment by 1;
 CREATE trigger trg_vendor_id
-  before insert on "VendorID"
+  before insert on VENDOR
   for each row
     begin
           select vendor_id_seq.nextval
@@ -76,7 +76,7 @@ CREATE TABLE "PURCHASE" (
 );
 CREATE sequence purchase_id_seq start with 1 increment by 1;
 CREATE trigger trg_purchase_id
-  before insert on "PurchaseID"
+  before insert on PURCHASE
   for each row
     begin
           select purchase_id_seq.nextval
@@ -94,7 +94,7 @@ CREATE TABLE "ORDER" (
 );
 CREATE sequence order_id_seq start with 1 increment by 1;
 CREATE trigger trg_order_id
-  before insert on "OrderID"
+  before insert on "ORDER"
   for each row
     begin
           select order_id_seq.nextval
