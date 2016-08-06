@@ -28,3 +28,8 @@ UPDATE INVENTORY
 SET "Quantity" = '&Quantity'
 WHERE INVENTORY."ItemSKU" = '&SKU';
 
+
+-- Query orders place by customer--
+Select "OrderID", ITEM."ItemSKU", ITEM."ItemName", CUSTOMER."CustomerID"
+from "ORDER", CUSTOMER, ITEM
+where "ORDER"."CustomerID" = CUSTOMER."CustomerID" and "ORDER"."ItemSKU" = ITEM."ItemSKU" and CUSTOMER."CustomerID" = &CustomerID ; 
