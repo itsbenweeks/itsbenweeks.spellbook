@@ -1,8 +1,8 @@
 
 -- Triger created from your trigger
 
-CREATE OR REPLACE TRIGGER NEXT_ORDER 
-BEFORE INSERT ON "ORDER" 
+CREATE OR REPLACE TRIGGER NEXT_ORDER
+BEFORE INSERT ON "ORDER"
 
 for EACH ROW
 
@@ -11,11 +11,12 @@ BEGIN
     into :new."OrderID"
     from dual;
 END;
+/
 
 -- Trigger created to check number of items available before a new order is inserted. Not compiling right now :(
 
 CREATE OR REPLACE TRIGGER AVAILABLE_QUANTITY
-BEFORE INSERT ON "ORDER" 
+BEFORE INSERT ON "ORDER"
 
 DECLARE
 
@@ -44,11 +45,11 @@ EXCEPTION
 END;
 /
 
--- Query to add new order. It shows a foreing key problem
+-- Query to add new order.
 
- UPDATE "ORDER"
+INSERT "ORDER"
    SET "Date" = '&Date',
-   "ORDER"."CustomerID" = &CustomeerID, 
+   "ORDER"."CustomerID" = &CustomeerID,
    "ORDER"."ItemSKU" = &ItemSKU,
-   "ORDER"."Quantity" = &Quantity, 
-   "ORDER"."EmployeeID" = &Employee_ID; 
+   "ORDER"."Quantity" = &Quantity,
+   "ORDER"."EmployeeID" = &Employee_ID;
