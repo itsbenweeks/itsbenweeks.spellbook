@@ -13,6 +13,7 @@ create trigger trg_employee_id
           into :new."EmployeeID"
           from dual;
     end;
+/
 
 CREATE TABLE "CUSTOMER" (
   "CustomerID" number primary key,
@@ -32,6 +33,7 @@ CREATE trigger trg_customer_id
           into :new."CustomerID"
           from dual;
     end;
+/
 
 CREATE TABLE "VENDOR" (
   "VendorID" number primary key,
@@ -51,6 +53,7 @@ CREATE trigger trg_vendor_id
           into :new."VendorID"
           from dual;
     end;
+/
 
 CREATE TABLE "ITEM" (
   "ItemSKU" varchar2(11) primary key,
@@ -83,6 +86,7 @@ CREATE trigger trg_purchase_id
           into :new."PurchaseID":
           from dual;
     end;
+/
 
 CREATE TABLE "ORDER" (
   "OrderID" number primary key,
@@ -101,3 +105,4 @@ CREATE trigger trg_order_id
           into :new."OrderID"
           from dual;
     end;
+/
