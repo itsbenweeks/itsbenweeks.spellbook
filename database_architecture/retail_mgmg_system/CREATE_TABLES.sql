@@ -4,8 +4,8 @@ CREATE TABLE "EMPLOYEE" (
   "LastName" varchar2(25),
   "SSN" varchar2(11)
 );
-create sequence employee_id_seq start with 1 increment by 1;
-create trigger trg_employee_id
+CREATE sequence employee_id_seq start with 1 increment by 1;
+CREATE OR REPLACE trigger trg_employee_id
   before insert on EMPLOYEE
   for each row
     begin
@@ -25,7 +25,7 @@ CREATE TABLE "CUSTOMER" (
   "TelephoneNumber" varchar2(17)
 );
 CREATE sequence customer_id_seq start with 1 increment by 1;
-CREATE trigger trg_customer_id
+CREATE OR REPLACE trigger trg_customer_id
   before insert on CUSTOMER
   for each row
     begin
@@ -45,7 +45,7 @@ CREATE TABLE "VENDOR" (
   "TelephoneNumber" varchar2(17)
 );
 CREATE sequence vendor_id_seq start with 1 increment by 1;
-CREATE trigger trg_vendor_id
+CREATE OR REPLACE trigger trg_vendor_id
   before insert on VENDOR
   for each row
     begin
@@ -78,7 +78,7 @@ CREATE TABLE "PURCHASE" (
   "Available" number(3)
 );
 CREATE sequence purchase_id_seq start with 1 increment by 1;
-CREATE trigger trg_purchase_id
+CREATE OR REPLACE trigger trg_purchase_id
   before insert on PURCHASE
   for each row
     begin
@@ -97,7 +97,7 @@ CREATE TABLE "ORDER" (
   "EmployeeID" number references EMPLOYEE("EmployeeID")
 );
 CREATE sequence order_id_seq start with 1 increment by 1;
-CREATE trigger trg_order_id
+CREATE OR REPLACE trigger trg_order_id
   before insert on "ORDER"
   for each row
     begin
