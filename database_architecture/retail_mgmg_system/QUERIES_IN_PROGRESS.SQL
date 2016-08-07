@@ -49,3 +49,6 @@ END;
 
  Insert into "ORDER" values (ORDER_ID_SEQ.nextval,'&Date','&Qty', '&ItemSKU','&Customer_ID','&Employee');
  
+  -- Insert New Customer
+  Insert into "CUSTOMER" values (CUSTOMER_ID_SEQ.nextval,'&First Name','&Last Name', '&Address','&City','&Zip Code', '&Telephone');
+  
