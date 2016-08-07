@@ -39,3 +39,9 @@ where "ORDER"."CustomerID" = CUSTOMER."CustomerID" and "ORDER"."ItemSKU" = ITEM.
 select INVENTORY."ItemSKU", sum(INVENTORY."Quantity") as "Quantity"
 from INVENTORY 
 group by INVENTORY."ItemSKU";
+
+-- Query to get most ordered items in the past year--
+
+SELECT "ITEM"."ItemName" as "Name", "ORDER"."ItemSKU" as "SKU", SUM("ORDER"."Quantity") AS "Quantity"
+FROM "ORDER" INNER JOIN "ITEM" ON "ITEM"."ItemSKU" = "ORDER"."ItemSKU" WHERE "ORDER"."Date" > SYSDATE - 365 -- May want to worry about leap years
+GROUP BY "ORDER"."ItemSKU", "ITEM"."ItemName" ORDER BY "Quantity" DESC;
