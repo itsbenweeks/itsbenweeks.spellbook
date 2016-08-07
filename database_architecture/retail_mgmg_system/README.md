@@ -11,4 +11,4 @@ Queries to write:
 - [x] Query to get order place by customer.
 - [x] Update statement to increase inventory.
 - [ ] Insert statement for customer table.
-- [ ] Insert statement for [New Order](https://www.youtube.com/watch?v=7uEBuqkkQRk).
+- [x] Insert statement for [New Order](https://www.youtube.com/watch?v=7uEBuqkkQRk).
