@@ -47,9 +47,5 @@ END;
 
 -- Query to add new order.
 
-INSERT "ORDER"
-   SET "Date" = '&Date',
-   "ORDER"."CustomerID" = &CustomeerID,
-   "ORDER"."ItemSKU" = &ItemSKU,
-   "ORDER"."Quantity" = &Quantity,
-   "ORDER"."EmployeeID" = &Employee_ID;
+ Insert into "ORDER" values (ORDER_ID_SEQ.nextval,'&Date','&Qty', '&ItemSKU','&Customer_ID','&Employee');
+ 
