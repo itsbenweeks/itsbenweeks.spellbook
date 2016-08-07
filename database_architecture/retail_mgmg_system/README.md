@@ -11,4 +11,4 @@ Queries to write:
 - [ ] Query to get order place by customer.
 - [ ] Trigger to remove from inventory.
 - [ ] Update statement to increase inventory.
-- [ ] Update statement for customer table.
+- [ ] Insert statement for customer table.
