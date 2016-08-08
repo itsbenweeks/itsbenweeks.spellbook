@@ -5,10 +5,10 @@ Final Project for Paul Russo's Database Management in the Summer of 2016.
 
 Queries to write:
 
-- [ ] Query to get inventory count.
-- [ ] Query to get customer name.
-- [ ] Query to get customer number.
-- [ ] Query to get order place by customer.
-- [ ] Trigger to remove from inventory.
-- [ ] Update statement to increase inventory.
-- [ ] Update statement for customer table.
+- [x] Query to get inventory count.
+- [x] Query to get customer name.
+- [x] Query to get customer number.
+- [x] Query to get order place by customer.
+- [x] Update statement to increase inventory.
+- [ ] Insert statement for customer table.
+- [x] Insert statement for [New Order](https://www.youtube.com/watch?v=7uEBuqkkQRk).
