@@ -42,8 +42,6 @@ group by INVENTORY."ItemSKU";
 
 -- Procedure to get most ordered items in the past year--
 CREATE OR REPLACE PROCEDURE top_items AS
-SET SERVEROUTPUT ON;
-DECLARE
   CURSOR top_item IS
     SELECT "ITEM"."ItemName" AS "Name", "ORDER"."ItemSKU" AS "SKU", SUM("ORDER"."Quantity") AS "Quantity"
       FROM "ORDER" INNER JOIN "ITEM" ON "ITEM"."ItemSKU" = "ORDER"."ItemSKU" WHERE "ORDER"."Date" > SYSDATE - 365
