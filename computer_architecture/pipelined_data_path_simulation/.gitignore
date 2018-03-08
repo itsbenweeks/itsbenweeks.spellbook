@@ -1,0 +1,4 @@
+*.pdf
+*.pyc
+.ropeproject
+.idea/
