@@ -1,4 +1,4 @@
-schooling
+itsbenweeks-spellbook
 =========
 
-Here's where I can keep relevant assignments for school related things. Will probably be updated infrequently due to its insular nature.
+The repository is where I keep notes on various topics that I'm researching/investigating or have researched/investigated.
