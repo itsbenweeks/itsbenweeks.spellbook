@@ -1,0 +1,10 @@
+insert into VENDOR ("VendorID", "FirstName", "LastName", "Address", "City", "ZipCode", "TelephoneNumber") values (1, 'Sarah', 'Nelson', '774 Del Mar Hill', 'Arroteia', '4940-342', '351-(921)563-9536');
+insert into VENDOR ("VendorID", "FirstName", "LastName", "Address", "City", "ZipCode", "TelephoneNumber") values (2, 'David', 'Lane', '153 Becker Avenue', 'Jinjiang', null, '86-(559)301-6899');
+insert into VENDOR ("VendorID", "FirstName", "LastName", "Address", "City", "ZipCode", "TelephoneNumber") values (3, 'Brandon', 'Nichols', '065 Almo Place', 'Vale Mourão', '2635-466', '351-(130)619-4123');
+insert into VENDOR ("VendorID", "FirstName", "LastName", "Address", "City", "ZipCode", "TelephoneNumber") values (4, 'Janet', 'Marshall', '307 Talisman Parkway', 'Tokār', null, '249-(989)752-2708');
+insert into VENDOR ("VendorID", "FirstName", "LastName", "Address", "City", "ZipCode", "TelephoneNumber") values (5, 'Kathryn', 'Stanley', '94 Warbler Drive', 'Vitoria-Gasteiz', '01005', '34-(642)413-9945');
+insert into VENDOR ("VendorID", "FirstName", "LastName", "Address", "City", "ZipCode", "TelephoneNumber") values (6, 'Christine', 'James', '74 Graedel Alley', 'Des Moines', '50393', '1-(515)567-0154');
+insert into VENDOR ("VendorID", "FirstName", "LastName", "Address", "City", "ZipCode", "TelephoneNumber") values (7, 'Christine', 'Pierce', '138 Clyde Gallagher Street', 'Le Havre', '76086 CEDEX', '33-(850)531-7200');
+insert into VENDOR ("VendorID", "FirstName", "LastName", "Address", "City", "ZipCode", "TelephoneNumber") values (8, 'Brenda', 'Woods', '05614 Anniversary Center', 'Mutis', null, '57-(826)975-0905');
+insert into VENDOR ("VendorID", "FirstName", "LastName", "Address", "City", "ZipCode", "TelephoneNumber") values (9, 'Billy', 'Burton', '1 Scofield Alley', 'Nová Role', null, '420-(454)313-8346');
+insert into VENDOR ("VendorID", "FirstName", "LastName", "Address", "City", "ZipCode", "TelephoneNumber") values (10, 'Jennifer', 'Long', '4726 John Wall Drive', 'Laiwu', null, '86-(952)243-5640');
