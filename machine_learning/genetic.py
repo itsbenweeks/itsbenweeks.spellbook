@@ -36,15 +36,15 @@ class GeneticAlgorithm(object):
 
 class GeneticFunctions(object):
     def probability_crossover(self):
-        r"""returns rate of occur crossover(0.0-1.0)"""
+        """returns rate of occur crossover(0.0-1.0)"""
         return 1.0
 
     def probability_mutation(self):
-        r"""returns rate of occur mutation(0.0-1.0)"""
+        """returns rate of occur mutation(0.0-1.0)"""
         return 0.0
 
     def initial(self):
-        r"""returns list of initial population
+        """returns list of initial population
         """
         return []
 
@@ -54,13 +54,13 @@ class GeneticFunctions(object):
         return len(chromosome)
 
     def check_stop(self, fits_populations):
-        r"""stop run if returns True
+        """stop run if returns True
         - fits_populations: list of (fitness_value, chromosome)
         """
         return False
 
     def parents(self, fits_populations):
-        r"""generator of selected parents
+        """generator of selected parents
         """
         gen = iter(sorted(fits_populations))
         while True:
@@ -71,12 +71,12 @@ class GeneticFunctions(object):
         return
 
     def crossover(self, parents):
-        r"""breed children
+        """breed children
         """
         return parents
 
     def mutation(self, chromosome):
-        r"""mutate chromosome
+        """mutate chromosome
         """
         return chromosome
     pass
@@ -121,9 +121,11 @@ if __name__ == "__main__":
                 worst = min(fits)
                 ave = sum(fits) / len(fits)
                 print(
-                    "[G %3d] score=(%4d, %4d, %4d): %r" %
-                    (self.counter, best, ave, worst,
-                     self.chromo2text(best_match)))
+                    "[G {3d}] score=({4d}, {4d}, {4d}): {}".format(
+                        self.counter, best, ave, worst, 
+                        self.chromo2text(best_match)
+                    )
+                )
                 pass
             return self.counter >= self.limit
 
