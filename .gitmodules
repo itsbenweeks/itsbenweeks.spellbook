@@ -1,3 +1,6 @@
 [submodule "wiki"]
 	path = wiki
 	url = https://github.com/itsbenweeks/itsbenweeks-spellbook.wiki.git
+[submodule "web_apps/engimatic"]
+	path = web_apps/engimatic
+	url = git@github.com:itsbenweeks/enigmatic.git
