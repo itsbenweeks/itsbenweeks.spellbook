@@ -1,9 +1,9 @@
 [submodule "wiki"]
 	path = wiki
 	url = https://github.com/itsbenweeks/itsbenweeks-spellbook.wiki.git
-[submodule "web_apps/engimatic"]
-	path = web_apps/engimatic
-	url = git@github.com:itsbenweeks/enigmatic.git
 [submodule "web_apps/shopsterfied"]
 	path = web_apps/shopsterfied
 	url = git@github.com:itsbenweeks/shopsterfied.git
+[submodule "web_apps/enigmatic"]
+	path = web_apps/enigmatic
+	url = git@github.com:itsbenweeks/enigmatic.git

@@ -1,0 +1,25 @@
+{
+  "player": "mightykid2",
+  "deviceID": "MOMS_IPAD",
+  "progresses": [
+    {
+      "timeStamp": "2019-01-22 01:10:11+0000",
+      "level": 1,
+      "score": 10,
+      "gameId": "PACMAN"
+    },
+    {
+      "timeStamp": "2019-01-22 01:11:11+0000",
+      "level": 2,
+      "score": 33,
+      "gameId": "PACMAN"
+
+    },
+    {
+      "timeStamp": "2019-01-22 01:12:21+0000",
+      "level": 4,
+      "score": 345,
+      "gameId": "SPACE_INVADERS"
+    }
+  ]
+}
