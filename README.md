@@ -10,7 +10,8 @@ Organization
 ├── README.md               <- This readme for people who are curious about this repo
 ├── computer_architecture   <- projects and notes relating to computer architecture
 ├── data_science            <- A collection of cookiecutter data science projects 
-├── database_architecture   <- Projects relating to database architecture
+├── database_architecture   <- Projects relating to database architecture.
+├── homelad                 <- Projects relating to homelab/self hosting.
 ├── machine_learning        <- Projects relating to machine learning.
 ├── scratch                 <- Miscellanious notes and musings
 ├── web_apps                <- A collection of lite web application projects 
