@@ -11,7 +11,7 @@ Organization
 ├── computer_architecture   <- projects and notes relating to computer architecture
 ├── data_science            <- A collection of cookiecutter data science projects 
 ├── database_architecture   <- Projects relating to database architecture.
-├── homelad                 <- Projects relating to homelab/self hosting.
+├── homelab                 <- Projects relating to homelab/self hosting.
 ├── machine_learning        <- Projects relating to machine learning.
 ├── scratch                 <- Miscellanious notes and musings
 ├── web_apps                <- A collection of lite web application projects 
