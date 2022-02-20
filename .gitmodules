@@ -1,6 +1,6 @@
 [submodule "wiki"]
 	path = wiki
-	url = https://github.com/itsbenweeks/itsbenweeks-spellbook.wiki.git
+    url = git@github.com:itsbenweeks/itsbenweeks-spellbook.wiki.git
 [submodule "web_apps/shopsterfied"]
 	path = web_apps/shopsterfied
 	url = git@github.com:itsbenweeks/shopsterfied.git
