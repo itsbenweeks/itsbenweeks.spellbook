@@ -12,7 +12,7 @@ https://www.reddit.com/r/DataHoarder/comments/8ocjxz/200tb_glusterfs_odroid_hc2_
 that something like this would be much easier to implement. So I bought some
 parts and decided to set to task.
 
-##Configuring your SD card.
+## Configuring your SD card.
 
 This was one of the easiest parts. I needed to configure my SD card to run
 ODroid's XU4 armbian image. Taking the 32GB card I purchased, I ran etcher and
@@ -24,7 +24,7 @@ Once the odroid image is flashed into the sd card, it's simply a matter of
 putting the card into the hc-2 and powering it on. After doing that, I was able
 to assign it an IP address and get started.
 
-##Setting up the HDD
+## Setting up the HDD
 Gluster is funded by Red Hat, so all their documentation mentions XFS. As such,
 I decided to go along with that in hopes that would minimize any potential
 issues. It turns out that armbian doesn't have xfs in it's stock image for xu4,
@@ -39,7 +39,7 @@ mount -a && mount
 ```
 
 
-##Configuring GlusterFS Servers
+## Configuring GlusterFS Servers
 
 In order to correctly configure GlusterFS, I needed to make sure that the
 networking was configure such that the nodes in the gluster cluster would be
@@ -69,3 +69,6 @@ With that done, the gluster command to create the volume was as follows:
 gluster volume create gvol0 transport tcp replica 2 thin-arbiter 1
 boseanum:/data/brick1 quadratum:/data/brick1 furcatum:/data/brick1 
 trispinosum:/data/brick1 amphirhopalum:/data/brick1 force
+```
+
+## Configuring the GlusterFS Client
